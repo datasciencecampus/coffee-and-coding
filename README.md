@@ -2,6 +2,8 @@
 
 A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding).
 
+Get in touch at: coffee.coding@ons.gov.uk
+
 ### Contributing 
 Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request. 
 
@@ -15,6 +17,8 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
+Please note *events are restricted to ONS employees*, unless individual approval has been given. [Sign up](https://www.eventbrite.co.uk/) to the next event.
+
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
-|Tue 27 Dec 2018 | 10:00 - 12:00 | NPT R103 | "What is Coffee and Coding?" and ______ | Luke Shaw & ______ | An introduction to what Coffee and Coding is across government and the plan for ONS, and _________
+|Tue 27 Dec 2018 | 10:00 - 12:00 | NPT R103 | "What is Coffee and Coding?" and "An Introduction to Data Science Tools" | Luke Shaw & David Pugh | What Coffee and Coding is across government and the plan for ONS, and an introduction to some of the various tools used in Data Science and when to use them - with a focus on R and Python.
