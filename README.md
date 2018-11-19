@@ -2,7 +2,7 @@
 
 A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding).
 
-Get in touch at: coffee.coding@ons.gov.uk
+Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for future events.
 
 ### Contributing 
 Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request. 
