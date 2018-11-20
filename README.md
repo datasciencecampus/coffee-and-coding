@@ -1,6 +1,6 @@
 <img src="images/ons_cnc_hex.png" width="200" align="right">
 
-# Coffee & Coding
+# ONS Newport Coffee & Coding
 
 A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding).
 
