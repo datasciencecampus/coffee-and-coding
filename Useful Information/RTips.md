@@ -16,7 +16,7 @@ To get R to install from the server do the following. If you use R Studio you ne
 
 ## How to get R to install packages
 
-# To get R to install from the server do the following.
+### To get R to install from the server do the following.
 
 1. On your D drive create a folder called R, and inside the R folder create a folder called lib, and open that folder.
 
@@ -37,7 +37,7 @@ To get R to install from the server do the following. If you use R Studio you ne
 9. Now install the package.
 
 
-## To get R to install a specific version of a package, (mainly when you are getting a 404 error) do the following:
+### To get R to install a specific version of a package, (mainly when you are getting a 404 error) do the following:
 
 1. Go to http://art-p-01/artifactory/vr-R/bin/windows/contrib/3.4/
 
