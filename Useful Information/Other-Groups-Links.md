@@ -22,6 +22,12 @@
   ### CodeHub Bristol
   https://www.meetup.com/CodeHub-Bristol/ 
   
+  ### Google Developer Group
+  https://www.meetup.com/GDGCardiff/
+  
+  ### Amazon Web Services (AWS) South Wales User Group
+  https://www.meetup.com/AWS-South-Wales-User-Group/
+  
   ## Slacks
   https://govdatascience.slack.com/
   
