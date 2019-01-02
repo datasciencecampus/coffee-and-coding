@@ -19,8 +19,9 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. 
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event (15th Jan) via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-coding-problem-solving-with-lego-tickets-54129128681).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
 |Tue 27 Nov 2018 | 10:00 - 12:00 | NPT R103 | "What is Coffee and Coding?" and "An Introduction to Data Science Tools" | Luke Shaw & David Pugh | What Coffee and Coding is across government and the plan for ONS, and an introduction to some of the various tools used in Data Science and when to use them - with a focus on R and Python.
+|Tue 15 Jan 2019 | 10:00 - 11:00 | NPT D.289 | "What is Coffee and Coding?", Lightening Talk: two mentoring programs, and “How to break down a problem into a coding problem” (with LEGO!) | Rose Almond, Skevi Pericelous & Ian Grimstead | What Coffee and Coding is, a description of Data Science mentoring programs and how to apply, and an interactive session (involving LEGO!) where we’ll be able to think about good practices involved in solving problems with code.
