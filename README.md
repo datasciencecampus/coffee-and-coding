@@ -24,4 +24,4 @@ Please note *events are restricted to ONS employees*, unless individual approval
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
 |Tue 27 Nov 2018 | 10:00 - 12:00 | NPT R103 | "What is Coffee and Coding?" and "An Introduction to Data Science Tools" | Luke Shaw & David Pugh | What Coffee and Coding is across government and the plan for ONS, and an introduction to some of the various tools used in Data Science and when to use them - with a focus on R and Python.
-|Tue 15 Jan 2019 | 10:00 - 11:00 | NPT D.289 | "What is Coffee and Coding?", Lightning Talk: two mentoring programs | Rose Almond, Skevi Pericelous | What Coffee and Coding is, a description of Data Science mentoring programs and how to apply, and then a Code Surgery.
+|Tue 15 Jan 2019 | 10:00 - 11:00 | NPT D.289 | "What is Coffee and Coding?", Lightning Talk: two mentoring programs | Rose Almond & Skevi Pericelous | What Coffee and Coding is, a description of Data Science mentoring programs and how to apply, and then a Code Surgery.
