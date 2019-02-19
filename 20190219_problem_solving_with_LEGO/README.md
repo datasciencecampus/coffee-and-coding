@@ -4,4 +4,4 @@ Powerpoint slides giving a set of problems to solve with LEGO - and how they rel
 
 Document containing building instructions for groups of problem solvers
 
-Presented by: Ian Grimstead and...
+Presented and created by: Ian Grimstead
