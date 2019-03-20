@@ -19,11 +19,12 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event (14th Mar) via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-be-more-functional-tickets-56492647028).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event (16th Apr) via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-building-skills-for-dap-tickets-58983256508).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
-|Thur 14 Mar 2019 | 10:00 - 11:00 | NPT D.289 | Be More Functional | Gareth Clews | Gareth will be live coding in python to give attendants a new view on how to formulate and solve problems.
+|Tue 16 Apr 2019 | 10:30 - 11:30 | NPT D.289 | Building Skills for DAP | Isabela Breton | What the Data Science Campus is doing as a partner to build skills for DAP
+|Thur 14 Mar 2019 | 10:00 - 11:00 | NPT D.289 | Be More Functional | Gareth Clews | Gareth live coding in python to give attendants a new view on how to formulate and solve problems.
 |Tue 19 Feb 2019 | 10:00 - 11:00 | NPT D.289 | Problem Solving with LEGO | Ian Grimstead | Interactive session (involving LEGO!) thinking about good practices involve in solving problems with code.
 |Tue 15 Jan 2019 | 10:00 - 11:00 | NPT D.289 | "What is Coffee and Coding?", Lightning Talk: two mentoring programs | Rose Almond & Skevi Pericelous | What Coffee and Coding is, a description of Data Science mentoring programs and how to apply, and then a Code Surgery (with R standards game)
 |Tue 27 Nov 2018 | 10:00 - 12:00 | NPT R103 | "What is Coffee and Coding?" and "An Introduction to Data Science Tools" | Luke Shaw & David Pugh | What Coffee and Coding is across government and the plan for ONS, and an introduction to some of the various tools used in Data Science and when to use them - with a focus on R and Python.
