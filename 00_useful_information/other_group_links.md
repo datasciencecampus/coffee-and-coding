@@ -3,7 +3,7 @@
   
   **Note:** The yammer groups and Slacks accounts are solely for ONS/Government staff with their work email addresses.
   
-    ## Slacks
+  ## Slacks
   https://govdatascience.slack.com/
   A very active cross-government slack with many helpful people for cracking code problems. There is a dedicated coffee-coding channel too!
   
