@@ -19,10 +19,11 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event (16th Apr) via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-building-skills-for-dap-tickets-58983256508).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event (14th May) via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-show-and-tell-carousel-tickets-60297832440).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
+|Tue 14 May 2019 | 11:00 - 12:00 | NPT R.103 | Show-and-Tell Carousel | Ryan Schofield, Vinny Anand-Kumar, Lewis Edwards | multiple ONS colleagues presenting examples of coding software they've used (R and Python) in their work, and how to get started doing the same
 |Tue 16 Apr 2019 | 10:30 - 11:30 | NPT D.289 | Building Skills for DAP | Isabela Breton | What the Data Science Campus is doing as a partner to build skills for DAP
 |Thur 14 Mar 2019 | 10:00 - 11:00 | NPT D.289 | Be More Functional | Gareth Clews | Gareth live coding in python to give attendants a new view on how to formulate and solve problems.
 |Tue 19 Feb 2019 | 10:00 - 11:00 | NPT D.289 | Problem Solving with LEGO | Ian Grimstead | Interactive session (involving LEGO!) thinking about good practices involve in solving problems with code.
