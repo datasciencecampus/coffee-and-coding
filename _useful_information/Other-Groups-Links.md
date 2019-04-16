@@ -1,7 +1,20 @@
   # List of other local programming group meet ups 
-  This isn't an exhausive list, please commit additional links or corrections if known. 
+  This isn't an exhausive list, please commit additional links or corrections if known. If any links are broken or you can't access them please let us know at coffee.coding@ons.gov.uk and we'll try to help and update this info. 
   
   **Note:** The yammer groups and Slacks accounts are solely for ONS/Government staff with their work email addresses.
+  
+    ## Slacks
+  https://govdatascience.slack.com/
+  A very active cross-government slack with many helpful people for cracking code problems. There is a dedicated coffee-coding channel too!
+  
+  https://gov-stats-service.slack.com/
+  
+  ## Yammer
+  ### R User Group
+  https://www.yammer.com/ons.gov.uk/#/threads/inGroup?type=in_group&feedId=5570520&view=all
+  ### Python User Group
+  https://www.yammer.com/ons.gov.uk/#/threads/inGroup?type=in_group&feedId=7712590
+
   
   ## Meet ups
   ### PyData
@@ -27,17 +40,6 @@
   
   ### Amazon Web Services (AWS) South Wales User Group
   https://www.meetup.com/AWS-South-Wales-User-Group/
-  
-  ## Slacks
-  https://govdatascience.slack.com/
-  
-  https://gov-stats-service.slack.com/
-  
-  ## Yammer
-  ### R User Group
-  https://www.yammer.com/ons.gsi.gov.uk/#/threads/inGroup?type=in_group&feedId=5570520&view=all
-  ### Python User Group
-  https://www.yammer.com/ons.gsi.gov.uk/#/threads/inGroup?type=in_group&feedId=7712590
   
   ## Recommended Courses
   ### MIT - Introduction to computer science and programming
