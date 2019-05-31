@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.3 Amend | Editing and Imputation</title>
+  <meta name="description" content="This is a guide for editing and imputing datasets." />
+  <meta name="generator" content="bookdown 0.10.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.3 Amend | Editing and Imputation" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:description" content="This is a guide for editing and imputing datasets." />
+  <meta name="github-repo" content="Vinayak-NZ/EditingImputationTeach" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.3 Amend | Editing and Imputation" />
+  
+  <meta name="twitter:description" content="This is a guide for editing and imputing datasets." />
+  <meta name="twitter:image" content="images/cover.png" />
+
+<meta name="author" content="Methodology" />
+
+
+<meta name="date" content="2019-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="select.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><img src="images/ONS.png"></li>
+<li><a href="https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts">Office for National Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="why-do-we-edit-and-impute-data.html"><a href="why-do-we-edit-and-impute-data.html"><i class="fa fa-check"></i><b>2</b> Why do we edit and impute data?</a><ul>
+<li class="chapter" data-level="2.1" data-path="perfect-data-vs-actual-data.html"><a href="perfect-data-vs-actual-data.html"><i class="fa fa-check"></i><b>2.1</b> Perfect data vs. Actual data</a></li>
+<li class="chapter" data-level="2.2" data-path="statistical-error.html"><a href="statistical-error.html"><i class="fa fa-check"></i><b>2.2</b> Statistical error</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="statistical-error.html"><a href="statistical-error.html#measurement-error"><i class="fa fa-check"></i><b>2.2.1</b> Measurement error</a></li>
+<li class="chapter" data-level="2.2.2" data-path="statistical-error.html"><a href="statistical-error.html#missingness"><i class="fa fa-check"></i><b>2.2.2</b> Missingness</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-quality.html"><a href="data-quality.html"><i class="fa fa-check"></i><b>2.3</b> Data Quality</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-does-editing-and-imputation-look-like.html"><a href="what-does-editing-and-imputation-look-like.html"><i class="fa fa-check"></i><b>3</b> What does editing and imputation look like?</a><ul>
+<li class="chapter" data-level="3.1" data-path="review.html"><a href="review.html"><i class="fa fa-check"></i><b>3.1</b> Review</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="review.html"><a href="review.html#what-to-consider"><i class="fa fa-check"></i><b>3.1.1</b> What to consider?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="review.html"><a href="review.html#how-to-review-data"><i class="fa fa-check"></i><b>3.1.2</b> How to review data?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>3.2</b> Select</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="select.html"><a href="select.html#what-to-consider-1"><i class="fa fa-check"></i><b>3.2.1</b> What to consider?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="select.html"><a href="select.html#how-to-select-data"><i class="fa fa-check"></i><b>3.2.2</b> How to select data?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="amend.html"><a href="amend.html"><i class="fa fa-check"></i><b>3.3</b> Amend</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="amend.html"><a href="amend.html#what-to-consider-2"><i class="fa fa-check"></i><b>3.3.1</b> What to consider?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="amend.html"><a href="amend.html#how-to-amend-data"><i class="fa fa-check"></i><b>3.3.2</b> How to amend data?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Editing and Imputation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="amend" class="section level2">
+<h2><span class="header-section-number">3.3</span> Amend</h2>
+<div id="what-to-consider-2" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> What to consider?</h3>
+<p>In the amend phase, the objective is to change the data values in order to improve data quality (see Figure 7). Units/ variables that were flagged in the select phase are amended to produce a transformed dataset, which should better meet the needs of customers.</p>
+<div class="figure">
+<img src="images/Amend.png" alt="Figure 7. Diagram presenting the flow of amending units/ variables to produce a transformed dataset" />
+<p class="caption">Figure 7. Diagram presenting the flow of amending units/ variables to produce a transformed dataset</p>
+</div>
+<p>A key objective of the amend phase is to use the appropriate methods and tools to transform the dataset. Most of the considerations in the amend phase will inform analysts on the appropriate methods and tools to use for amending the data.</p>
+<p>In order to select the appropriate methods and tools for amending a dataset, it is important that analysts understand the data and its issues. These include:</p>
+<ol style="list-style-type: decimal">
+<li>The type of error in the data; identifying the error source, which resulted in units being selected for treatment. Awareness of the error type in the dataset will help in identifying the root cause, which in turn will help resolve the issue and improve data quality. For example, a number of businesses in a dataset have been selected for treatment, because the reported revenue was considered too large in the context of other units. Further analysis of this selection reveals that it stems from measurement error; businesses did not report in thousands, which in turn inflated their actual revenue. As a result of identifying the error source, an amend function of converting the figures to thousands will improve the quality of the data.<br />
+</li>
+<li>Identifying the error generating mechanism. Errors in a dataset may be systematic or random. The former are errors that result in a consistent deviation of estimates from true values; contributing to the bias of outputs. Whereas the latter don’t have any identifiable pattern but can increase the variation of estimates. Identifying the error generating mechanism will advise on what methods and tools to use in improving data quality; functions that manage bias with systematic errors and those that manage variance with random errors.<br />
+</li>
+<li>Identifying the type of missingness in the data. The types of missingness include missing completely at random, missing at random or not missing at random. The pattern of missingness will advise how best to estimate for the missing units/ values in the dataset.<br />
+</li>
+<li>Knowing what data are available to derive estimates of missing or incorrect units/ values. Data that could be used in the amend phase includes the units and variables in the dataset of interest, as well as other related data sources that analysts might have access to.<br />
+</li>
+<li>The impact of amend actions on the frequency structure of data. Although the data is transformed during the amend phase, it is expected that these changes will not alter the distribution of the variable in question. That is, if the underlying distribution of the variable is assumed to be correct, an amend function should not introduce bias or modify the variance of the data as a result of changing incorrect values and/or filling in missing values.<br />
+</li>
+<li>Ensuring that automatic changes are a result of edit rules, which are tested and are shown to improve data quality. Automatic corrections are generally used when there is confidence that the amended data are closer to the truth. As a result, edit rules that result in automatic changes should be verified through testing and specified in the design of the statistical product. Ad hoc/ untested automatic corrections have the risk of introducing more error into the data.<br />
+</li>
+<li>Ensuring that all edit rules applied are still relevant and accurate for the statistical production. Edit rules that are built into the design of a production cycle should be reviewed; to determine whether the type or mechanism of the error it is addressing has not changed, and whether the edit rules need to be adapted.</li>
+</ol>
+</div>
+<div id="how-to-amend-data" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> How to amend data?</h3>
+<p>The aim of the amend phase is to improve the quality of data by addressing the missing and erroneous values and units. By managing the impact of the error sources, the ability to draw inferences of the target population and target concept is in turn improved. The amend functions can be categorised as follows (see Table 5):</p>
+<ul>
+<li>Variable amendment. To best capture the target concept, variable amendment is applied; where observed values are altered or missing values are filled in.<br />
+</li>
+<li>Unit amendment. To best capture the target population, units in the data modified so that the final set of units are in scope, representative of the target population and are compiled correctly.</li>
+</ul>
+<p><span style="color:grey"> Table 5. Table presenting the methods of amending data for the purpose of correcting erroneous values or resolving missing values. </span> <img src="images/AmendMethods.svg" /></p>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="select.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-what_edit_impute.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Editing and Imputation.pdf", "Editing and Imputation.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+---
+title: "Editing and Imputation"
+subtitle: "Why?"
+output:
+  revealjs::revealjs_presentation:
+    center: yes
+    reveal_plugins:
+    - notes
+    - zoom
+    self_contained: no
+    theme: night
+    transition: slide
+---
+
+# Introduction
+
+## What we will cover?
+
+<aside class="notes">
+
+</aside>
+
+# Perfect vs actual
+The Dataset:  
+What we want vs. What we get
+
+<aside class="notes">
+Statistics are driven by a need.  
+To address that need, information/ data are compiled in a dataset.  
+Here, we will look at the challenges in data collection, and why our dataset doesn’t always come out the way we’d like.
+</aside>
+
+## The perfect dataset
+
+<aside class="notes">
+The perfect dataset is one where the design has captured a representative set of units, the variables have mapped out the target concept accurately, and all units have responded to all items in the collection instrument correctly. With a perfect dataset, the researcher can make accurate inferences about the target population and concept, and in turn answer the question that prompted the data collection.
+</aside>
+
+## The actual dataset
+
+<aside class="notes">
+In reality there are challenges in data collection, which impede the ability to capture a target population and concept. The representativeness of the target population and the measurement of the target concept can be impacted by:  
+- Missingness as respondents might refuse to answer items/ variables, of they may not know the answer.  
+- Incorrect responses as respondents might mis-interpret the items/ variables.
+</aside>
+
+## Missing and incorrect data
+
+<aside class="notes">
+The purpose of data collection is to answer a question about a target population and target concept. As a result, it is intended that units and variables in the dataset are representative of the target population and target concept respectively.  
+
+The issues that arise in data collection can impact our ability to capture the target population and target concept, and as a result, will produce an answer to the research question that is not quite right.
+</aside>
+
+# Error
+
+<aside class="notes">
+In statistics, data is collected from units, which are commonly individuals, households or businesses.  
+These collection units will provide values for a range of items/ variables.  
+The purpose of data collection is to answer a question about a target population and target concept.  
+The challenges, constraints and imperfections of data collection and statistical production mean that we are presented with an estimate, as opposed to the true answer.  
+The information from the units is compiled in a dataset, which is then processed, and analysed to answer the question we were presented with.  
+The “truth/ true answer” remains unknown. However, we aim to get as close as we can to this “truth” with our estimate.  
+Here, we will introduce the concept of statistical error, and discuss how missingness and incorrect responses are related to statistical error.
+</aside>
+
+## Statistical error
+
+<aside class="notes">
+Statistical error is the difference between the estimate, produced by the data collection, and the unknown truth to the research question. The aim is to derive an estimate that is as close as possible to the “true value”.  
+If we are asked to state the average income in the UK, we may decide to carry out a simple random sample of individuals that are in the working age population.  
+Using the data, we estimate the average income to be £30,000.  
+Imagine that you somehow know the true value, and it is £32,000.  
+In this example, our estimate is relatively close to the truth and as a result would have a low measure of statistical error.  
+In reality, we don’t know the “true” value. But we can estimate the error of an estimate to gauge how accurately it represents the truth. Differences between the estimate and the truth are driven by the bias and variance introduced in the statistical production cycle.
+</aside>
+
+## Variance
+
+<aside class="notes">
+Variance is the range by which an estimate could vary across multiple iterations of a given design.  
+If we are to collect four different simple random samples to estimate the average income, we are likely to obtain a different estimate in each iteration. Although we have applied the same methodology, there is an element of chance as we are using a random sample of individuals. As a result, having different individuals in each sample will lead to differences between the estimates. Ideally, we would have low variance in our estimates, whereby the estimates would be fairly similar. The benefit of low variance is that you know if you repeated the design multiple times, you would obtain a similar estimate on each iteration. 
+</aside>
+
+## Variance
+High variance
+
+<aside class="notes">
+This is an example of high variance, whereby there is a lot variation in the estimates between the four samples. The issue of high variance is that it introduces uncertainty in the estimate derived from your design. For example, you may decide to report the point estimate from this sample as the answer to the question “What is the average income in the UK”. But since you don’t know the true value, you would have to give your customers an indication of how much certainty you can place on this estimate. You know that this particular design, can produce an estimate ranging from £20,000 to £70,000. As a result, you would state that although you estimate the income to be £45,000, it could be £25,000 higher or lower than this point estimate. A higher degree of variance may not be acceptable to customers, as the decisions that they make using the data could be drastically different if the average income was £20,000 vs £70,000.  
+One of the contributors to variance is having fewer data points, which could be a result of having a small sample or missingness.  Fewer data points mean that we rely heavily on responding units to represent the target population, and derive income estimates. We are less likely to capture the target population with fewer units, and if the missingness is random we are using a different subset of those sampled to derive income estimates.
+</aside>
+
+## Bias
+<aside class="notes">
+Bias is a consistent direction of difference between a parameter (i.e. true value) and its estimate across multiple iterations with a fixed design. Here, you can see that there is a bias in the production cycle, which slightly over-estimates average income. That is, some aspect of the production cycle is producing estimates that are consistently higher than the truth.
+</aside>
+
+## Bias
+High bias
+<aside class="notes">
+This is an example of high bias. Although the variance is low in this case, some aspect of the production cycle is resulting in a heavily biased estimates in all four iterations of the same design. Aspects of statistical production that contribute to bias are:  
+- Missingness; units in the data consistently different to units not in the data  
+Incorrect responses; issues in the design of the collection instrument or characteristics of subject matter that cause respondents to consistently mis-report 
+The problem with high bias is that we fail to provide an accurate answer to the question we were presented with. As a result, this might mis inform decisions being made based on the estimates/ data produced.
+</aside>
+
+## Sources of error
+<aside class="notes">
+Error sources are aspects of the statistical production cycle that can contribute to statistical error.
+Error sources contribute to the bias and variance of an estimate, which in turn reflects how closely the estimate is to the truth.
+There are multiple error sources in the statistical production cycle; some of which impact the representation of the target population and some of which impact the measurement of the underlying construct.  Definitions of each error source are presented in the accompanying document.
+</aside>
+
+## Data quality
+<aside class="notes">
+Error sources may negatively impact the quality of the statistical product. By introducing more statistical error, the accuracy and reliability dimension of data quality are compromised. That is, the data fail to portray the reality it was designed to represent and as a result the product may no longer be fit for purpose.
+</aside>
+
+# Missingness
+<aside class="notes">
+Missingness may produce a dataset that is not representative of the target population. Fewer units or fewer values for a particular variable mean you don’t have as many data points to use in your analysis or derivation of estimates. With fewer data points, there would be more uncertainty/ variance in the estimate. Moreover, if the missing data are different to the data we have, then there is a risk that we have a biased estimate.  
+Ultimately, missingness can result in a product/estimate that does not reflect the underlying truth.
+There are different types of missingness.  
+All types of missingness will introduce variance into the estimate. However, the risk of bias is different between the different types of missingness.  
+Here, we will introduce the types of missingness and highlight their impact on data quality.
+</aside>
+
+## Missing data
+<aside class="notes">
+This is an example dataset from a survey of ten respondents and four variables, age, annual income, sex and annual pension contribution.  
+The highlighted values represent missingness in the data. That is, respondents failed to provide this information. However, we were able to obtain this information using some other data source.  
+As a result, we have the ability to determine if units that are missing for a given variable are different to the respondents.  
+Take a few seconds to look at age (7 seconds).  
+There don’t appear to be any obvious differences between respondents and non-respondents with respect to age. Some non-respondents are relatively young, whilst some are relatively old. A visual inspection of the data does not reveal a relationship between age and missingness. As a result, we may state that the missingness appears to be random; there is no identifiable pattern.  
+Take a few seconds to look at annual income (7 seconds).  
+There is some evidence that missingness is related to income. Those that earn above 100,000 have not responded to the income item. The missingness does not appear to be random; it is related to the item of interest.  
+Take a few seconds to look at annual pension contribution (7 seconds).  
+We can’t see any obvious differences between respondents and non-respondents with respect to annual pension contribution. Some non-respondents make relatively large contributions, whilst some make relatively small contributions. So like age, the missingness for annual pension contribution appears to be random with respect to the item of interest.  
+However, once we look at the other characteristics of respondents vs non-respondents, we see that men are less likely to respond to the pension item relative to women. So, the missingness does have some pattern. That is, it is not completely random.  
+The purpose of this slide was to introduce you to the idea that we can express missingness in terms of whether it is random.
+</aside>
+
+## Missing completely at random
+<aside class="notes">
+MCAR is when the probability that a unit or item is missing is independent of the missing value and of the other characteristics of the respondent. That is, there are no systematic differences between respondents and non-respondents in terms of the missing variable, and any other available variable. As a result, there is very low risk of bias with MCAR, if left unaddressed.
+</aside>
+
+## Missing at random
+<aside class="notes">
+MAR reflects instances where the probability that a unit or item is missing does not depend on the missing value but does depend on some other characteristics.  
+With instances of MAR, there are no differences between responding and missing units with regards to the variable of interest. However, there are differences with regards to the other variables.  
+For example, it may be the case that those with high pension contributions and those with low pension contributions are equally likely to respond to the income item, whilst men are less likely to respond compared to women.  
+If males tend to contribute more than females, this may drive some of the differences between respondents and non-respondents.  
+So there is a risk of bias with MAR, if left unaddressed.  
+Applying imputation by using the variables predictive of missingness can manage the impact of bias on the final estimates. That is, we can split the dataset into male and female units, and based on what we know about the relationship between sex differences and pension contribution, we can estimate appropriate values for males and females.
+</aside>
+
+## Not missing at random
+<aside class="notes">
+NMAR is when the probability of response depends on the missing value itself.  
+Earlier, we presented the example where high income earners may be less likely to respond to the income item relative to low income earners.  
+So, the only thing that can predict the missingness in our dataset are the missing values themselves.  
+If this is the case, and if we cannot access other data sources to identify the differences between respondents and non-respondents, there is a high risk of introducing bias.  
+The risk of bias can be difficult to manage because there is insufficient information to identify the cause of missingness and in turn, advise how we estimate the missing values. As missingness is dependent on the missing value itself and no other information in the dataset can be used to produce estimates of the missing values, we would need to obtain other data sources to help produce reliable and accurate estimates for the missing values.
+</aside>
+
+## Types of missingness
+<aside class="notes">
+Missingness can be a result of non-response or data loading issues, and can impact the representation of the target population. There are three different types of missingness. All types of missingness will introduce variance into the estimate. However, the risk of bias is different between the different types of missingness.
+Missing completely at random (MCAR)
+Missing at random (MAR)
+Not missing at random (NMAR)
+</aside>
+
+# Why edit and impute?
+<aside class="notes">
+To bring it all together, why do we need to edit and impute.
+That is, why do we need to change values, and filling in missing values in our dataset.
+</aside>
+
+## Why?
+<aside class="notes">
+Error sources may negatively impact the quality of the statistical product. By introducing more statistical error, the accuracy and reliability dimension of data quality are compromised. That is, the data fail to portray the reality it was designed to represent and as a result the product may no longer be fit for purpose.  
+Changing erroneous responses and filling in missing values helps manage the impact of error sources. By accounting for missingness and incorrect responses, researchers reduce statistical error. Decreasing the uncertainty in the estimates, and better representing the truth improves the quality of the data and helps meet customer needs, which in turn maintain organisational reputation. 
+</aside>

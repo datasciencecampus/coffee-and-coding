@@ -1,0 +1,314 @@
+---
+title: "Editing and Imputation"
+author: "Office for National Statistics"
+date: "Version 1"
+output: 
+  html_document:
+    theme: flatly
+    highlight: pygments
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 4
+    toc_float: true
+---
+
+<style>
+body {
+text-align: justify}
+
+.caption {
+  color: grey;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+library(knitr)
+library(mice)
+library(plyr)
+
+#Load data
+DataK<-read.csv("adult.csv")
+
+#Separate males and females to generate income
+DataMale<-DataK[DataK$sex=="Male",]
+DataFemale<-DataK[DataK$sex=="Female",]
+
+#Create income for males and females
+DataMale$IncomeN<-rnorm(1:nrow(DataMale),80000,20000)
+DataFemale$IncomeN<-rnorm(1:nrow(DataFemale),55000,10000)
+
+DataK_edit<-rbind(DataMale,DataFemale)
+
+#Create numeric version of sex and subset to core variables
+DataK_edit$SexN<-ifelse(DataK_edit$sex=="Female",1,2)
+DataK_editSub<-DataK_edit[c("age","IncomeN","SexN")]
+
+DataK_editSub<-rename(DataK_editSub,c("age"="Age","IncomeN"="Income","SexN"="Sex"))
+
+```
+
+## Introduction
+
+Editing and imputation are both methods of data processing. Editing refers to the detection and correction of errors in the data, whilst imputation is a method of correcting errors in a dataset. This document addresses the following questions:  
+  
+1) Why edit and impute data?  
+2) What does editing and imputation look like?
+
+
+## Why do we edit and impute data?
+There are several challenges associated with data collecion, which can influence the quality of the statistical product. Editing and imputing can be used as a means of managing the imopact of these data collection issues on data quality.
+
+### Perfect data vs. Actual data
+In statistics, data is collected from units, which are commonly individuals, households or businesses. These collection units will provide values for a range of items/ variables. The purpose of data collection is to answer a question about a target population and target concept. As a result, it is intended that units and variables in the dataset are representative of the target population and target concept respectively.    
+The perfect dataset is one where the design has captured a representative set of units, the variables have mapped out the target concept accurately, and all units have responded to all items in the collection instrument correctly. With a perfect dataset, the researcher can make reliable and precise inferences about the target population and concept, and in turn answer the question that prompted the data collection.  
+  
+In reality there are challenges in data collection, which impede the ability to capture a target population and concept. The representativeness of the target population and the measurement of the target concept can be impacted by:  
+  
+- Including units outside the target population  
+- Excluding units in the target population  
+- Using variables that do not map onto the target concept  
+- Missingness  
+- Erroneous responses  
+  
+The issues that arise in data collection will produce an answer to the research question that is further away from the “truth”.
+
+### Statistical error
+Statistical error is the difference between the estimate, produced by the data collection, and the unknown truth to the research question. The aim is to derive an estimate that is as close as possible to the “true value”. Differences between the estimate and the truth are driven by the bias and variance introduced in the statistical production cycle.  
+  
+Variance is the range by which an estimate could vary across multiple iterations of a given design. If a sample survey were to be carried out with the aim of measuring the amount of money donated to charities, there would be a variation in the estimates from different samples of the same design. That is, including different people in the sample may produce different estimates of the amount donated. Some samples may underestimate, whilst some overestimate; as a result, selection error (also referred to as sampling error) can be expressed as the range by which estimates vary as a result of sample composition.  
+  
+Bias is a consistent direction of difference between a parameter (i.e. true value) and its estimate across multiple iterations with a fixed design. In the example of the survey measuring charitable donations, there may be a consistent social desirability bias to overstate the amount donated. As a result, this measurement error can be expressed as the degree to which the survey design overestimates the amount that people donate to charities.  
+  
+The examples above illustrated how the selection of units and measurement of variables can introduce variance and bias respectively. Selection error and measurement error are both referred to as error sources, as they introduce statistical error; introducing more uncertainty in whether the estimate captures the unknown “truth”. There are multiple error sources in the statistical production cycle; some of which impact the representation of the target population and some of which impact the measurement of the underlying construct.
+
+#### Measurement error
+Measurement error is the potential variation and bias introduced during collection. It could be the result of flaws in the collection instrument or due to how units provide responses. For example, people may mis-remember details or interpret questions differently from what was intended.
+
+#### Missingness
+Missingness can be a result of non-response or data loading issues, and can impact the representation of the target population. There are three different types of missingness. All types of missingness will introduce variance into the estimate. However, the risk of bias is different between the different types of missingness.   
+  
+1) Missing completely at random (MCAR)  
+2) Missing at random (MAR)  
+3) Missing Not at random (NMAR)  
+  
+An income dataset is used to demonstrate the different types of missingness. It has three variables, age, sex and income. The age and sex variables were derived from the open Census Adult income dataset available on [Kaggle](https://www.kaggle.com/uciml/adult-census-income#adult.csv). Whilst the income variable was derived so that males on average had a higher income than females. In demonstrating each type of missingness, the income variable was set to have a missing proportion of 30%, whilst age and sex were set to have no missingness. The code used to derive the income variable, along with the first five units of the dataset are presented below.  
+
+```{r income, eval=FALSE}
+#Separate males and females to generate income
+DataMale<-DataK[DataK$sex=="Male",]
+DataFemale<-DataK[DataK$sex=="Female",]
+
+#Create income for males and females
+DataMale$IncomeN<-rnorm(1:nrow(DataMale),80000,20000)
+DataFemale$IncomeN<-rnorm(1:nrow(DataFemale),55000,10000)
+
+#Append males and females into one dataset
+DataK_edit<-rbind(DataMale,DataFemale)
+```
+
+```{r head, echo=FALSE}
+
+kable(DataK_editSub[1:5,], caption="Table 1. Table presenting first five units of the income dataset")
+
+```
+  
+MCAR is when the probability that a unit or item is missing is independent of the missing value and of the other characteristics of the respondent. That is, there are no systematic differences between respondents and non-respondents in terms of the missing variable, and any other available variable. As a result, there is a very low risk of bias with MCAR, if left unaddressed. The code below simulates MCAR with respect to income, in the Income dataset. The histograms demonstrate that there is little change in the mean and distribution of the income variable before and after simulating the missingness.    
+  
+```{r pattern, include=FALSE}
+
+#Simulate missingness
+Get<-ampute(DataK_editSub)
+patterns <- Get$patterns
+patterns[1,3]<-1
+
+```
+
+```{r MCARplot, fig.wide=1, fig.height=4, fig.show='hold',fig.align='center', fig.cap="Figure 1. Histograms showing the distribution of income with complete and missing data, where pattern of missing is completely at random"}
+
+#Missing Completely at Random
+MCAR<-ampute(DataK_editSub, prop=0.3, patterns=patterns, mech="MCAR")
+MCAR_c<-MCAR$data
+MCAR_m<-MCAR$amp
+
+#Plot MCAR
+MCARcompleteDis<-hist(MCAR_c$Income, main="Distribution of Income (complete data)", xlab="Income")
+abline(v=mean(MCAR_c$Income))
+text(100000,5500,"Mean=$71736.58",col="red")
+MCARmissingDis<-hist(MCAR_m$Income, main="Distribution of Income (MCAR)", xlab="Income")
+abline(v=mean(MCAR_m$Income, na.rm=TRUE))
+text(100000,5000,"Mean=$71754.2",col="red")
+
+```
+
+  
+MAR reflects instances where the probability that a unit or item is missing does not depend on the missing value but does depend on some other characteristics. With instances of MAR, there are no differences between responding and missing units with regards to the variable of interest. However, there are differences with regards to the other variables. For example, it may be the case that men are less likely to respond to the income item compared to women. If males tend to earn more than females, this may drive some of the differences between respondents and non-respondents. There is a risk of bias with MAR, if left unaddressed. Applying imputation by using the variables predictive of the variable of interest can manage the impact of bias on the final estimates.  
+  
+The example below applies MAR with respect to the income variable; whereby missingness for this variable is related to the other variables in the dataset, age and sex. The mosaic plot below reveals that there was a greater proportion of missingness amongst males relative to females. The impact of MAR appears to be relatively minor; with small changes to the distribution and mean of income. However, these changes are greater than those observed for MCAR, which is consistent with what is known about the dataset and the menchanism of missingness. That is, as missingness is dependent on age and sex, and since males (in this dataset) had higher incomes relative to females, it is expected that if fewer males respond to the income item, this would underestimate income. As a result, there is a risk of bias with MAR, especially as the rate of missingness increases. However, this bias can be managed by using the variables predictive of missing item; in this example, estimates of Income could be derived using sex.       
+  
+
+```{r MARplot, fig.wide=1, fig.height=4, fig.show='hold',fig.align='center', fig.cap="Figure 2. Histograms showing the distribution of income with complete and missing data, where pattern of missing is random"}
+
+#Missing at Random
+MAR<-ampute(DataK_editSub, prop=0.3, patterns=patterns, mech="MAR")
+MAR_c<-MAR$data
+MAR_m<-MAR$amp
+
+#Plot MAR
+MARcompleteDis<-hist(MAR_c$Income, main="Distribution of Income (complete data)", xlab="Income")
+abline(v=mean(MAR_c$Income))
+text(100000,5500,"Mean=$71736.58",col="red")
+MARmissingDis<-hist(MAR_m$Income, main="Distribution of Income (MAR)", xlab="Income")
+abline(v=mean(MAR_m$Income, na.rm=TRUE))
+text(100000,4500,"Mean=71239.59",col="red")
+
+```
+
+```{r Mosaic, echo=FALSE, fig.show='hold',fig.align='center', fig.cap="Figure 3. Mosaic plot comparing proportion of missingness for the income variable between male and female respondents, where 1=Missing and 0=Non-missing"}
+MAR_m$Missing<-ifelse(is.na(MAR_m$Income),1,0)
+MAR_m$SexO<-ifelse(MAR_m$Sex==1,"Female","Male")
+MissingSex<-table(MAR_m$SexO,MAR_m$Missing)
+PlotMiss<-mosaicplot(MissingSex, main="Proportion Missing for Income- Male vs. Females")
+
+```
+
+MNAR is when the probability of response depends on the missing value itself. For example, high income earners may be less likely to respond to the income item relative to low income earners. There is a risk of bias with MNAR, which can be difficult to manage as it is difficult to identify the mechanism of missingness, and there is insufficient information to advise the imputation of figures. The histograms below reveal that if missingness for Income is related to  income itself, then there is a greater change observed in the distribution, relative to MCAR and MAR.    
+
+```{r MNARplot, fig.wide=1, fig.height=4, fig.show='hold',fig.align='center', fig.cap="Figure 4. Histograms showing the distribution of income with complete and missing data, where pattern of missing is not at random"}
+
+#Not Missing at Random
+MNAR<-ampute(DataK_editSub, prop=0.3, patterns=patterns, mech="MNAR")
+MNAR_c<-MNAR$data
+MNAR_m<-MNAR$amp
+
+#Plot MNAR
+MNARcompleteDis<-hist(MNAR_c$Income, main="Distribution of Income (complete data)", xlab="Income")
+abline(v=mean(MNAR_c$Income))
+text(100000,5500,"Mean=$71736.58",col="red")
+MNARmissingDis<-hist(MNAR_m$Income, main="Distribution of Income (MNAR)", xlab="Income")
+abline(v=mean(MNAR_m$Income, na.rm=TRUE))
+text(100000,5500,"Mean=$70296.97",col="red")
+```
+
+
+### Data Quality
+
+Error sources may negatively impact the quality of the statistical product. By introducing more statistical error, the accuracy and reliability dimension of data quality are compromised. That is, the data fail to portray the reality it was designed to represent and as a result the product may no longer be fit for purpose.  
+  
+Correcting erroneous responses and filling in missing values helps manage the impact of error sources. By accounting for missingness and incorrect responses, researchers reduce statistical error. Decreasing the uncertainty in the estimates, and better representing the truth improves the quality of the data and helps meet customer needs, which in turn maintain organisational reputation. 
+
+## What does editing and imputation look like?
+At a high level, editing and imputation is the process of correcting erroneous data and filling in missing data. The process of modifying data, by either changing incorrect values or filling in missing values, can be broken down into the following three phases:  
+
+1) Review: Data are examined for potential problems; identifying instances of missingness and incorrect responses  
+2) Select: Data are identified for further treatment. Of those potential problems identified in the review phase, a method is applied to determine which of these erroneous cases need to be corrected or which missing values need to be estimated  
+3) Amend: Changes are applied to the data identified in the select phase by either correcting errors/ filling in missing values, which should help manage the impact of error sources, which in turn will reduce bias and variance, and improve the accuracy and reliability of the data.  
+  
+This model for conceptualising the process of data editing and imputation was developed by the United Nations Economic Commission for Europe (2015). The three phases could be carried out as data is being collected or post data collection. The next few sections will look closely at each of the three phases; presenting the considerations and introducing the methods applied within each phase.  
+
+### Review
+#### What to consider?
+The aim of the review phase is to examine the data and flag values/ units that are potentially problematic to data quality (see Figure 5). In order to identify potential problems in the data, it would be beneficial to understand the risks in the production cycle or “issues” that may already exist. For example, knowledge that some items in the questionnaire require technical expertise may prompt a review of these variables to ensure that respondents have provided correct answers. That is, understanding how the data is produced will help in identifying the error sources that could compromise the accuracy of the statistics. And in turn, awareness of what error sources are present in the production cycle will help target actions and choose appropriate methods for the review phase.  
+  
+![Figure 5. Diagram presenting the flow of the review phase to identify potential problems, whilst the input data remains unchanged](images/Review.png)  
+
+In addition to helping manage the impact of error sources for a given release, identifying potential problems in the review phase will help in evaluating if the data is fit for purpose, and improve the quality of future releases. For example, if respondents have mis-interpreted items relating to pension contribution by reporting their expected income from pension as opposed to the amount contributed, this can be relayed to customers. By communicating these issues, customers of data can determine whether the product is still fit for purpose. Moreover, the problems identified for this release can be used to improve future iterations of the product so that respondents are less likely to mis-interpret the pension contribution items.  
+  
+#### How to review data?
+Data can be reviewed using a variety of methods. Table 2 presents a list of data review methods, along with definitions and the utility of each in identifying problems in the dataset. The types of review methods include:  
+  
+- Review of data validity, which ensure that data entered/ provided meet some pre-specified criteria for the variable in question  
+- Review of data plausibility, produces a quantitative measure to reflect the likelihood of a given value/ aggregate being true  
+- Review of units, which checks each unit in the dataset to gauge its quality and impact in producing the key outcome measures  
+
+<span style="color:grey">
+  Table 2. Table presenting the methods of reviewing data for the purpose of identifying potential problems in data processing
+</span>
+![](images/ReviewMethods.svg)  
+  
+### Select
+#### What to consider?
+In the select phase, units or fields within units are identified for further treatment; to either change incorrect values or fill in missing values (see Figure 6). When selecting data items, it is important to consider the volume of items being identified for treatment, and the potential impact of each unit on the quality of the data.  
+  
+![Figure 6. Diagram presenting the flow of selecting units/ variables for further treatment in a dataset](images/Select.png)  
+  
+A key objective when selecting data is to change the fewest possible data items to manage an error source. For example, if a unit has provided responses to items A , B and C; whereby items A and B should equal C, but in this case do not (see Table 3), the following set of data items could be selected for amending:  
+  
+1) A  
+2) B  
+3) C  
+4) A and B  
+5) A and C  
+6) B and C  
+
+```{r ABC, echo=FALSE}
+
+A <- 5
+B <- 6
+C <- 15
+
+SelDat<-cbind(A,B,C)
+
+kable(SelDat, caption="Table 3. Table showing a value from a dataset that has been selected for treatment. It was expected that values for A and B should sum to C.")
+
+```
+  
+It is likely that one of options (1),(2) or (3) would be selected as these require the fewest items to change, in order to correct the error. A larger volume of items selected for change will impact the timeliness and cost of the production. Moreover, there is an argument to retain as much of the original valid responses as it is assumed that these are closer to the truth, relative to the imputed or edited values.  
+  
+The selection of a unit should be made with consideration for the impact that this unit will have on the quality of the data. Units may have varying influence on the estimates produced with the data as a result of varied design weights, or as a result of their percentage contribution to a point estimate. When a large number of units are identified in the review phase as being potentially problematic; selecting those that have a greater impact on data quality is a more effective approach, given time and resource constraints.   
+  
+#### How to select data?
+Methods for selecting data (see Table 4) can involve either:   
+  
+- Select entire units from a data set for further treatment  
+- Selecting variables in units for a different treatment than the remaining variables  
+  
+<span style="color:grey">
+  Table 4. Table presenting the methods of selecting data for the purpose of amending units or values
+</span>
+![](images/SelectMethods.svg)
+
+  
+### Amend
+#### What to consider?
+In the amend phase, the objective is to change the data values in order to improve data quality (see Figure 7). Units/ variables that were flagged in the select phase are amended to produce a transformed dataset, which should better meet the needs of customers.  
+  
+![Figure 7. Diagram presenting the flow of amending units/ variables to produce a transformed dataset](images/Amend.png)  
+  
+A key objective of the amend phase is to use the appropriate methods and tools to transform the dataset. Most of the considerations in the amend phase will inform analysts on the appropriate methods and tools to use for amending the data.   
+  
+In order to select the appropriate methods and tools for amending a dataset, it is important that analysts understand the data and its issues. These include:  
+  
+1) The type of error in the data; identifying the error source, which resulted in units being selected for treatment. Awareness of the error type in the dataset will help in identifying the root cause, which in turn will help resolve the issue and improve data quality. For example, a number of businesses in a  dataset have been selected for treatment, because the reported revenue was considered too large in the context of other units. Further analysis of this selection reveals that it stems from measurement error; businesses did not report in thousands, which in turn inflated their actual revenue. As a result of identifying the error source, an amend function of converting the figures to thousands will improve the quality of the data.  
+2) Identifying the error generating mechanism. Errors in a dataset may be systematic or random. The former are errors that result in a consistent deviation of estimates from true values; contributing to the bias of outputs. Whereas the latter don’t have any identifiable pattern but can increase the variation of estimates. Identifying  the error generating mechanism will advise on what methods and tools to use in improving data quality; functions that manage bias with systematic errors and those that manage variance with random errors.  
+3) Identifying the type of missingness in the data. The types of missingness include missing completely at random, missing at random or not missing at random. The pattern of missingness will advise how best to estimate for the missing units/ values in the dataset.  
+4) Knowing what data are available to derive estimates of missing or incorrect units/ values. Data that could be used in the amend phase includes the units and variables in the dataset of interest, as well as other related data sources that analysts might have access to.  
+5) The impact of amend actions on the frequency structure of data. Although the data is transformed during the amend phase, it is expected that these changes will not alter the distribution of the variable in question. That is, if the underlying distribution of the variable is assumed to be correct, an amend function should not introduce bias or modify the variance of the data as a result of changing incorrect values and/or filling in missing values.  
+6) Ensuring that automatic changes are a result of edit rules, which are tested and are shown to improve  data quality. Automatic corrections are generally used when there is confidence that the amended data are closer to the truth. As a result, edit rules that result in automatic changes should be verified through testing and specified in the design of the statistical product. Ad hoc/ untested automatic corrections have the risk of introducing more error into the data.  
+7) Ensuring that all edit rules applied are still relevant and accurate for the statistical production. Edit rules that are built into the design of a production cycle should be reviewed; to determine whether the type or mechanism of the error it is addressing has not changed, and whether the edit rules need to be adapted.  
+  
+#### How to amend data?
+The aim of the amend phase is to improve the quality of data by addressing the missing and erroneous values and units. By managing the impact of the error sources, the ability to draw inferences of the target population and target concept is in turn improved. The amend functions can be categorised as follows (see Table 5):  
+  
+- Variable amendment. To best capture the target concept, variable amendment is applied; where observed values are altered or missing values are filled in.  
+- Unit amendment.  To best capture the target population, units in the data modified so that the final set of units are in scope, representative of the target population and are compiled correctly.  
+
+<span style="color:grey">
+  Table 5. Table presenting the methods of amending data for the purpose of correcting erroneous values or resolving missing values.
+</span>
+![](images/AmendMethods.svg)
+
+## References
+
+de Waal, T., Pannekoek, J., & Scholtus, S. (2011). Handbook of statistical data editing and imputation. Hoboken, NJ: John Wiley & Sons Inc.  
+  
+United Nations Economic Commission for Europe (UNECE) (2015, October). Generic statistical data editing models: GSDEMs. An output prepared under the High Level Group for the Modernisation of Official Statistics, Paris. Retrieved from [UNECE StatsWiki](https://statswiki.unece.org/download/attachments/117772009/Generic%20Statistical%20Data%20Editing%20Models%20v1_0.pdf?version=1&modificationDate=1446566359930&api=v2)
+
+
+
+
+
+

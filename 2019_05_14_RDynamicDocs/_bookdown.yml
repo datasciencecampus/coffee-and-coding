@@ -1,0 +1,10 @@
+book_filename: "Editing and Imputation"
+chapter_name: "Chapter "
+repo: https://github.com/Vinayak-NZ/EditingImputationTeach 
+output_dir: docs
+rmd_files: ["index.Rmd", "01-why_edit_impute.Rmd", "02-what_edit_impute.Rmd", "03-references.Rmd"]
+clean: [packages.bib, bookdown.bib]
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
