@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Editing and Imputation</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="EI_Presentation_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="EI_Presentation_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Editing and Imputation</h1>
+  <h1 class="subtitle">Why?</h1>
+</section>
+
+<section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="what-we-will-cover" class="slide level2">
+<h2>What we will cover?</h2>
+<aside class="notes">
+</aside>
+</section></section>
+<section><section id="perfect-vs-actual" class="titleslide slide level1"><h1>Perfect vs actual</h1></section><section id="the-perfect-dataset" class="slide level2">
+<h2>The perfect dataset</h2>
+<aside class="notes">
+The perfect dataset is one where the design has captured a representative set of units, the variables have mapped out the target concept accurately, and all units have responded to all items in the collection instrument correctly. With a perfect dataset, the researcher can make accurate inferences about the target population and concept, and in turn answer the question that prompted the data collection.
+</aside>
+</section><section id="the-actual-dataset" class="slide level2">
+<h2>The actual dataset</h2>
+<aside class="notes">
+In reality there are challenges in data collection, which impede the ability to capture a target population and concept. The representativeness of the target population and the measurement of the target concept can be impacted by:<br />
+- Missingness as respondents might refuse to answer items/ variables, of they may not know the answer.<br />
+- Incorrect responses as respondents might mis-interpret the items/ variables.
+</aside>
+</section><section id="missing-and-incorrect-data" class="slide level2">
+<h2>Missing and incorrect data</h2>
+<aside class="notes">
+<p>The purpose of data collection is to answer a question about a target population and target concept. As a result, it is intended that units and variables in the dataset are representative of the target population and target concept respectively.</p>
+The issues that arise in data collection can impact our ability to capture the target population and target concept, and as a result, will produce an answer to the research question that is not quite right.
+</aside>
+</section></section>
+<section><section id="error" class="titleslide slide level1"><h1>Error</h1></section><section id="statistical-error" class="slide level2">
+<h2>Statistical error</h2>
+<aside class="notes">
+Statistical error is the difference between the estimate, produced by the data collection, and the unknown truth to the research question. The aim is to derive an estimate that is as close as possible to the “true value”.<br />
+If we are asked to state the average income in the UK, we may decide to carry out a simple random sample of individuals that are in the working age population.<br />
+Using the data, we estimate the average income to be £30,000.<br />
+Imagine that you somehow know the true value, and it is £32,000.<br />
+In this example, our estimate is relatively close to the truth and as a result would have a low measure of statistical error.<br />
+In reality, we don’t know the “true” value. But we can estimate the error of an estimate to gauge how accurately it represents the truth. Differences between the estimate and the truth are driven by the bias and variance introduced in the statistical production cycle.
+</aside>
+</section><section id="variance" class="slide level2">
+<h2>Variance</h2>
+<aside class="notes">
+Variance is the range by which an estimate could vary across multiple iterations of a given design.<br />
+If we are to collect four different simple random samples to estimate the average income, we are likely to obtain a different estimate in each iteration. Although we have applied the same methodology, there is an element of chance as we are using a random sample of individuals. As a result, having different individuals in each sample will lead to differences between the estimates. Ideally, we would have low variance in our estimates, whereby the estimates would be fairly similar. The benefit of low variance is that you know if you repeated the design multiple times, you would obtain a similar estimate on each iteration.
+</aside>
+</section><section id="variance-1" class="slide level2">
+<h2>Variance</h2>
+<p>High variance</p>
+<aside class="notes">
+This is an example of high variance, whereby there is a lot variation in the estimates between the four samples. The issue of high variance is that it introduces uncertainty in the estimate derived from your design. For example, you may decide to report the point estimate from this sample as the answer to the question “What is the average income in the UK”. But since you don’t know the true value, you would have to give your customers an indication of how much certainty you can place on this estimate. You know that this particular design, can produce an estimate ranging from £20,000 to £70,000. As a result, you would state that although you estimate the income to be £45,000, it could be £25,000 higher or lower than this point estimate. A higher degree of variance may not be acceptable to customers, as the decisions that they make using the data could be drastically different if the average income was £20,000 vs £70,000.<br />
+One of the contributors to variance is having fewer data points, which could be a result of having a small sample or missingness. Fewer data points mean that we rely heavily on responding units to represent the target population, and derive income estimates. We are less likely to capture the target population with fewer units, and if the missingness is random we are using a different subset of those sampled to derive income estimates.
+</aside>
+</section><section id="bias" class="slide level2">
+<h2>Bias</h2>
+<aside class="notes">
+Bias is a consistent direction of difference between a parameter (i.e. true value) and its estimate across multiple iterations with a fixed design. Here, you can see that there is a bias in the production cycle, which slightly over-estimates average income. That is, some aspect of the production cycle is producing estimates that are consistently higher than the truth.
+</aside>
+</section><section id="bias-1" class="slide level2">
+<h2>Bias</h2>
+High bias
+<aside class="notes">
+This is an example of high bias. Although the variance is low in this case, some aspect of the production cycle is resulting in a heavily biased estimates in all four iterations of the same design. Aspects of statistical production that contribute to bias are:<br />
+- Missingness; units in the data consistently different to units not in the data<br />
+Incorrect responses; issues in the design of the collection instrument or characteristics of subject matter that cause respondents to consistently mis-report The problem with high bias is that we fail to provide an accurate answer to the question we were presented with. As a result, this might mis inform decisions being made based on the estimates/ data produced.
+</aside>
+</section><section id="sources-of-error" class="slide level2">
+<h2>Sources of error</h2>
+<aside class="notes">
+Error sources are aspects of the statistical production cycle that can contribute to statistical error. Error sources contribute to the bias and variance of an estimate, which in turn reflects how closely the estimate is to the truth. There are multiple error sources in the statistical production cycle; some of which impact the representation of the target population and some of which impact the measurement of the underlying construct. Definitions of each error source are presented in the accompanying document.
+</aside>
+</section><section id="data-quality" class="slide level2">
+<h2>Data quality</h2>
+<aside class="notes">
+Error sources may negatively impact the quality of the statistical product. By introducing more statistical error, the accuracy and reliability dimension of data quality are compromised. That is, the data fail to portray the reality it was designed to represent and as a result the product may no longer be fit for purpose.
+</aside>
+</section></section>
+<section><section id="missingness" class="titleslide slide level1"><h1>Missingness</h1></section><section id="missing-data" class="slide level2">
+<h2>Missing data</h2>
+<aside class="notes">
+This is an example dataset from a survey of ten respondents and four variables, age, annual income, sex and annual pension contribution.<br />
+The highlighted values represent missingness in the data. That is, respondents failed to provide this information. However, we were able to obtain this information using some other data source.<br />
+As a result, we have the ability to determine if units that are missing for a given variable are different to the respondents.<br />
+Take a few seconds to look at age (7 seconds).<br />
+There don’t appear to be any obvious differences between respondents and non-respondents with respect to age. Some non-respondents are relatively young, whilst some are relatively old. A visual inspection of the data does not reveal a relationship between age and missingness. As a result, we may state that the missingness appears to be random; there is no identifiable pattern.<br />
+Take a few seconds to look at annual income (7 seconds).<br />
+There is some evidence that missingness is related to income. Those that earn above 100,000 have not responded to the income item. The missingness does not appear to be random; it is related to the item of interest.<br />
+Take a few seconds to look at annual pension contribution (7 seconds).<br />
+We can’t see any obvious differences between respondents and non-respondents with respect to annual pension contribution. Some non-respondents make relatively large contributions, whilst some make relatively small contributions. So like age, the missingness for annual pension contribution appears to be random with respect to the item of interest.<br />
+However, once we look at the other characteristics of respondents vs non-respondents, we see that men are less likely to respond to the pension item relative to women. So, the missingness does have some pattern. That is, it is not completely random.<br />
+The purpose of this slide was to introduce you to the idea that we can express missingness in terms of whether it is random.
+</aside>
+</section><section id="missing-completely-at-random" class="slide level2">
+<h2>Missing completely at random</h2>
+<aside class="notes">
+MCAR is when the probability that a unit or item is missing is independent of the missing value and of the other characteristics of the respondent. That is, there are no systematic differences between respondents and non-respondents in terms of the missing variable, and any other available variable. As a result, there is very low risk of bias with MCAR, if left unaddressed.
+</aside>
+</section><section id="missing-at-random" class="slide level2">
+<h2>Missing at random</h2>
+<aside class="notes">
+MAR reflects instances where the probability that a unit or item is missing does not depend on the missing value but does depend on some other characteristics.<br />
+With instances of MAR, there are no differences between responding and missing units with regards to the variable of interest. However, there are differences with regards to the other variables.<br />
+For example, it may be the case that those with high pension contributions and those with low pension contributions are equally likely to respond to the income item, whilst men are less likely to respond compared to women.<br />
+If males tend to contribute more than females, this may drive some of the differences between respondents and non-respondents.<br />
+So there is a risk of bias with MAR, if left unaddressed.<br />
+Applying imputation by using the variables predictive of missingness can manage the impact of bias on the final estimates. That is, we can split the dataset into male and female units, and based on what we know about the relationship between sex differences and pension contribution, we can estimate appropriate values for males and females.
+</aside>
+</section><section id="not-missing-at-random" class="slide level2">
+<h2>Not missing at random</h2>
+<aside class="notes">
+NMAR is when the probability of response depends on the missing value itself.<br />
+Earlier, we presented the example where high income earners may be less likely to respond to the income item relative to low income earners.<br />
+So, the only thing that can predict the missingness in our dataset are the missing values themselves.<br />
+If this is the case, and if we cannot access other data sources to identify the differences between respondents and non-respondents, there is a high risk of introducing bias.<br />
+The risk of bias can be difficult to manage because there is insufficient information to identify the cause of missingness and in turn, advise how we estimate the missing values. As missingness is dependent on the missing value itself and no other information in the dataset can be used to produce estimates of the missing values, we would need to obtain other data sources to help produce reliable and accurate estimates for the missing values.
+</aside>
+</section><section id="types-of-missingness" class="slide level2">
+<h2>Types of missingness</h2>
+<aside class="notes">
+Missingness can be a result of non-response or data loading issues, and can impact the representation of the target population. There are three different types of missingness. All types of missingness will introduce variance into the estimate. However, the risk of bias is different between the different types of missingness. Missing completely at random (MCAR) Missing at random (MAR) Not missing at random (NMAR)
+</aside>
+</section></section>
+<section><section id="why-edit-and-impute" class="titleslide slide level1"><h1>Why edit and impute?</h1></section><section id="why" class="slide level2">
+<h2>Why?</h2>
+<aside class="notes">
+Error sources may negatively impact the quality of the statistical product. By introducing more statistical error, the accuracy and reliability dimension of data quality are compromised. That is, the data fail to portray the reality it was designed to represent and as a result the product may no longer be fit for purpose.<br />
+Changing erroneous responses and filling in missing values helps manage the impact of error sources. By accounting for missingness and incorrect responses, researchers reduce statistical error. Decreasing the uncertainty in the estimates, and better representing the truth improves the quality of the data and helps meet customer needs, which in turn maintain organisational reputation.
+</aside>
+</section></section>
+    </div>
+  </div>
+
+  <script src="EI_Presentation_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="EI_Presentation_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'EI_Presentation_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'EI_Presentation_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

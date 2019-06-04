@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.2 Statistical error | Editing and Imputation</title>
+  <meta name="description" content="This is a guide for editing and imputing datasets." />
+  <meta name="generator" content="bookdown 0.10.1 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.2 Statistical error | Editing and Imputation" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.png" />
+  <meta property="og:description" content="This is a guide for editing and imputing datasets." />
+  <meta name="github-repo" content="Vinayak-NZ/EditingImputationTeach" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.2 Statistical error | Editing and Imputation" />
+  
+  <meta name="twitter:description" content="This is a guide for editing and imputing datasets." />
+  <meta name="twitter:image" content="images/cover.png" />
+
+<meta name="author" content="Methodology" />
+
+
+<meta name="date" content="2019-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="perfect-data-vs-actual-data.html">
+<link rel="next" href="data-quality.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><img src="images/ONS.png"></li>
+<li><a href="https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts">Office for National Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="why-do-we-edit-and-impute-data.html"><a href="why-do-we-edit-and-impute-data.html"><i class="fa fa-check"></i><b>2</b> Why do we edit and impute data?</a><ul>
+<li class="chapter" data-level="2.1" data-path="perfect-data-vs-actual-data.html"><a href="perfect-data-vs-actual-data.html"><i class="fa fa-check"></i><b>2.1</b> Perfect data vs. Actual data</a></li>
+<li class="chapter" data-level="2.2" data-path="statistical-error.html"><a href="statistical-error.html"><i class="fa fa-check"></i><b>2.2</b> Statistical error</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="statistical-error.html"><a href="statistical-error.html#measurement-error"><i class="fa fa-check"></i><b>2.2.1</b> Measurement error</a></li>
+<li class="chapter" data-level="2.2.2" data-path="statistical-error.html"><a href="statistical-error.html#missingness"><i class="fa fa-check"></i><b>2.2.2</b> Missingness</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-quality.html"><a href="data-quality.html"><i class="fa fa-check"></i><b>2.3</b> Data Quality</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-does-editing-and-imputation-look-like.html"><a href="what-does-editing-and-imputation-look-like.html"><i class="fa fa-check"></i><b>3</b> What does editing and imputation look like?</a><ul>
+<li class="chapter" data-level="3.1" data-path="review.html"><a href="review.html"><i class="fa fa-check"></i><b>3.1</b> Review</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="review.html"><a href="review.html#what-to-consider"><i class="fa fa-check"></i><b>3.1.1</b> What to consider?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="review.html"><a href="review.html#how-to-review-data"><i class="fa fa-check"></i><b>3.1.2</b> How to review data?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>3.2</b> Select</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="select.html"><a href="select.html#what-to-consider-1"><i class="fa fa-check"></i><b>3.2.1</b> What to consider?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="select.html"><a href="select.html#how-to-select-data"><i class="fa fa-check"></i><b>3.2.2</b> How to select data?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="amend.html"><a href="amend.html"><i class="fa fa-check"></i><b>3.3</b> Amend</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="amend.html"><a href="amend.html#what-to-consider-2"><i class="fa fa-check"></i><b>3.3.1</b> What to consider?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="amend.html"><a href="amend.html#how-to-amend-data"><i class="fa fa-check"></i><b>3.3.2</b> How to amend data?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Editing and Imputation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="statistical-error" class="section level2">
+<h2><span class="header-section-number">2.2</span> Statistical error</h2>
+<p>Statistical error is the difference between the estimate, produced by the data collection, and the unknown truth to the research question. The aim is to derive an estimate that is as close as possible to the “true value”. Differences between the estimate and the truth are driven by the bias and variance introduced in the statistical production cycle.</p>
+<p>Variance is the range by which an estimate could vary across multiple iterations of a given design. If a sample survey were to be carried out with the aim of measuring the amount of money donated to charities, there would be a variation in the estimates from different samples of the same design. That is, including different people in the sample may produce different estimates of the amount donated. Some samples may underestimate, whilst some overestimate; as a result, selection error (also referred to as sampling error) can be expressed as the range by which estimates vary as a result of sample composition.</p>
+<p>Bias is a consistent direction of difference between a parameter (i.e. true value) and its estimate across multiple iterations with a fixed design. In the example of the survey measuring charitable donations, there may be a consistent social desirability bias to overstate the amount donated. As a result, this measurement error can be expressed as the degree to which the survey design overestimates the amount that people donate to charities.</p>
+<p>The examples above illustrated how the selection of units and measurement of variables can introduce variance and bias respectively. Selection error and measurement error are both referred to as error sources, as they introduce statistical error; introducing more uncertainty in whether the estimate captures the unknown “truth”. There are multiple error sources in the statistical production cycle; some of which impact the representation of the target population and some of which impact the measurement of the underlying construct.</p>
+<div id="measurement-error" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Measurement error</h3>
+<p>Measurement error is the potential variation and bias introduced during collection. It could be the result of flaws in the collection instrument or due to how units provide responses. For example, people may mis-remember details or interpret questions differently from what was intended.</p>
+</div>
+<div id="missingness" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Missingness</h3>
+<p>Missingness can be a result of non-response or data loading issues, and can impact the representation of the target population. There are three different types of missingness. All types of missingness will introduce variance into the estimate. However, the risk of bias is different between the different types of missingness.</p>
+<ol style="list-style-type: decimal">
+<li>Missing completely at random (MCAR)<br />
+</li>
+<li>Missing at random (MAR)<br />
+</li>
+<li>Missing Not at random (NMAR)</li>
+</ol>
+<p>An income dataset is used to demonstrate the different types of missingness. It has three variables, age, sex and income. The age and sex variables were derived from the open Census Adult income dataset available on <a href="https://www.kaggle.com/uciml/adult-census-income#adult.csv">Kaggle</a>. Whilst the income variable was derived so that males on average had a higher income than females. In demonstrating each type of missingness, the income variable was set to have a missing proportion of 30%, whilst age and sex were set to have no missingness. The code used to derive the income variable, along with the first five units of the dataset are presented below.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Separate males and females to generate income</span>
+DataMale&lt;-DataK[DataK<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>,]
+DataFemale&lt;-DataK[DataK<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>,]
+
+<span class="co">#Create income for males and females</span>
+DataMale<span class="op">$</span>IncomeN&lt;-<span class="kw">rnorm</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(DataMale),<span class="dv">80000</span>,<span class="dv">20000</span>)
+DataFemale<span class="op">$</span>IncomeN&lt;-<span class="kw">rnorm</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(DataFemale),<span class="dv">55000</span>,<span class="dv">10000</span>)
+
+<span class="co">#Append males and females into one dataset</span>
+DataK_edit&lt;-<span class="kw">rbind</span>(DataMale,DataFemale)</code></pre></div>
+<table>
+<caption><span id="tab:head">Table 2.1: </span>Table 1. Table presenting first five units of the income dataset</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Age</th>
+<th align="right">Income</th>
+<th align="right">Sex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7</td>
+<td align="right">38</td>
+<td align="right">59033.18</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td align="right">41</td>
+<td align="right">111004.43</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td align="right">38</td>
+<td align="right">39915.39</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td align="right">32</td>
+<td align="right">114660.90</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td align="right">51</td>
+<td align="right">80755.32</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<p>MCAR is when the probability that a unit or item is missing is independent of the missing value and of the other characteristics of the respondent. That is, there are no systematic differences between respondents and non-respondents in terms of the missing variable, and any other available variable. As a result, there is a very low risk of bias with MCAR, if left unaddressed. The code below simulates MCAR with respect to income, in the Income dataset. The histograms demonstrate that there is little change in the mean and distribution of the income variable before and after simulating the missingness.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Missing Completely at Random</span>
+MCAR&lt;-<span class="kw">ampute</span>(DataK_editSub, <span class="dt">prop=</span><span class="fl">0.3</span>, <span class="dt">patterns=</span>patterns, <span class="dt">mech=</span><span class="st">&quot;MCAR&quot;</span>)
+MCAR_c&lt;-MCAR<span class="op">$</span>data
+MCAR_m&lt;-MCAR<span class="op">$</span>amp
+
+<span class="co">#Plot MCAR</span>
+MCARcompleteDis&lt;-<span class="kw">hist</span>(MCAR_c<span class="op">$</span>Income, <span class="dt">main=</span><span class="st">&quot;Distribution of Income (complete data)&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Income&quot;</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="kw">mean</span>(MCAR_c<span class="op">$</span>Income))
+<span class="kw">text</span>(<span class="dv">100000</span>,<span class="dv">5500</span>,<span class="st">&quot;Mean=$71736.58&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
+MCARmissingDis&lt;-<span class="kw">hist</span>(MCAR_m<span class="op">$</span>Income, <span class="dt">main=</span><span class="st">&quot;Distribution of Income (MCAR)&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Income&quot;</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="kw">mean</span>(MCAR_m<span class="op">$</span>Income, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))
+<span class="kw">text</span>(<span class="dv">100000</span>,<span class="dv">5000</span>,<span class="st">&quot;Mean=$71754.2&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:MCARplot"></span>
+<img src="Editing_and_Imputation_files/figure-html/MCARplot-1.png" alt="Figure 1. Histograms showing the distribution of income with complete and missing data, where pattern of missing is completely at random" width="672" /><img src="Editing_and_Imputation_files/figure-html/MCARplot-2.png" alt="Figure 1. Histograms showing the distribution of income with complete and missing data, where pattern of missing is completely at random" width="672" />
+<p class="caption">
+Figure 2.1: Figure 1. Histograms showing the distribution of income with complete and missing data, where pattern of missing is completely at random
+</p>
+</div>
+<p>MAR reflects instances where the probability that a unit or item is missing does not depend on the missing value but does depend on some other characteristics. With instances of MAR, there are no differences between responding and missing units with regards to the variable of interest. However, there are differences with regards to the other variables. For example, it may be the case that men are less likely to respond to the income item compared to women. If males tend to earn more than females, this may drive some of the differences between respondents and non-respondents. There is a risk of bias with MAR, if left unaddressed. Applying imputation by using the variables predictive of the variable of interest can manage the impact of bias on the final estimates.</p>
+<p>The example below applies MAR with respect to the income variable; whereby missingness for this variable is related to the other variables in the dataset, age and sex. The mosaic plot below reveals that there was a greater proportion of missingness amongst males relative to females. The impact of MAR appears to be relatively minor; with small changes to the distribution and mean of income. However, these changes are greater than those observed for MCAR, which is consistent with what is known about the dataset and the menchanism of missingness. That is, as missingness is dependent on age and sex, and since males (in this dataset) had higher incomes relative to females, it is expected that if fewer males respond to the income item, this would underestimate income. As a result, there is a risk of bias with MAR, especially as the rate of missingness increases. However, this bias can be managed by using the variables predictive of missing item; in this example, estimates of Income could be derived using sex.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Missing at Random</span>
+MAR&lt;-<span class="kw">ampute</span>(DataK_editSub, <span class="dt">prop=</span><span class="fl">0.3</span>, <span class="dt">patterns=</span>patterns, <span class="dt">mech=</span><span class="st">&quot;MAR&quot;</span>)
+MAR_c&lt;-MAR<span class="op">$</span>data
+MAR_m&lt;-MAR<span class="op">$</span>amp
+
+<span class="co">#Plot MAR</span>
+MARcompleteDis&lt;-<span class="kw">hist</span>(MAR_c<span class="op">$</span>Income, <span class="dt">main=</span><span class="st">&quot;Distribution of Income (complete data)&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Income&quot;</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="kw">mean</span>(MAR_c<span class="op">$</span>Income))
+<span class="kw">text</span>(<span class="dv">100000</span>,<span class="dv">5500</span>,<span class="st">&quot;Mean=$71736.58&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
+MARmissingDis&lt;-<span class="kw">hist</span>(MAR_m<span class="op">$</span>Income, <span class="dt">main=</span><span class="st">&quot;Distribution of Income (MAR)&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Income&quot;</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="kw">mean</span>(MAR_m<span class="op">$</span>Income, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))
+<span class="kw">text</span>(<span class="dv">100000</span>,<span class="dv">4500</span>,<span class="st">&quot;Mean=71239.59&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:MARplot"></span>
+<img src="Editing_and_Imputation_files/figure-html/MARplot-1.png" alt="Figure 2. Histograms showing the distribution of income with complete and missing data, where pattern of missing is random" width="672" /><img src="Editing_and_Imputation_files/figure-html/MARplot-2.png" alt="Figure 2. Histograms showing the distribution of income with complete and missing data, where pattern of missing is random" width="672" />
+<p class="caption">
+Figure 2.2: Figure 2. Histograms showing the distribution of income with complete and missing data, where pattern of missing is random
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:Mosaic"></span>
+<img src="Editing_and_Imputation_files/figure-html/Mosaic-1.png" alt="Figure 3. Mosaic plot comparing proportion of missingness for the income variable between male and female respondents, where 1=Missing and 0=Non-missing" width="672" />
+<p class="caption">
+Figure 2.3: Figure 3. Mosaic plot comparing proportion of missingness for the income variable between male and female respondents, where 1=Missing and 0=Non-missing
+</p>
+</div>
+<p>MNAR is when the probability of response depends on the missing value itself. For example, high income earners may be less likely to respond to the income item relative to low income earners. There is a risk of bias with MNAR, which can be difficult to manage as it is difficult to identify the mechanism of missingness, and there is insufficient information to advise the imputation of figures. The histograms below reveal that if missingness for Income is related to income itself, then there is a greater change observed in the distribution, relative to MCAR and MAR.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Not Missing at Random</span>
+MNAR&lt;-<span class="kw">ampute</span>(DataK_editSub, <span class="dt">prop=</span><span class="fl">0.3</span>, <span class="dt">patterns=</span>patterns, <span class="dt">mech=</span><span class="st">&quot;MNAR&quot;</span>)
+MNAR_c&lt;-MNAR<span class="op">$</span>data
+MNAR_m&lt;-MNAR<span class="op">$</span>amp
+
+<span class="co">#Plot MNAR</span>
+MNARcompleteDis&lt;-<span class="kw">hist</span>(MNAR_c<span class="op">$</span>Income, <span class="dt">main=</span><span class="st">&quot;Distribution of Income (complete data)&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Income&quot;</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="kw">mean</span>(MNAR_c<span class="op">$</span>Income))
+<span class="kw">text</span>(<span class="dv">100000</span>,<span class="dv">5500</span>,<span class="st">&quot;Mean=$71736.58&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
+MNARmissingDis&lt;-<span class="kw">hist</span>(MNAR_m<span class="op">$</span>Income, <span class="dt">main=</span><span class="st">&quot;Distribution of Income (MNAR)&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Income&quot;</span>)
+<span class="kw">abline</span>(<span class="dt">v=</span><span class="kw">mean</span>(MNAR_m<span class="op">$</span>Income, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))
+<span class="kw">text</span>(<span class="dv">100000</span>,<span class="dv">5500</span>,<span class="st">&quot;Mean=$70296.97&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:MNARplot"></span>
+<img src="Editing_and_Imputation_files/figure-html/MNARplot-1.png" alt="Figure 4. Histograms showing the distribution of income with complete and missing data, where pattern of missing is not at random" width="672" /><img src="Editing_and_Imputation_files/figure-html/MNARplot-2.png" alt="Figure 4. Histograms showing the distribution of income with complete and missing data, where pattern of missing is not at random" width="672" />
+<p class="caption">
+Figure 2.4: Figure 4. Histograms showing the distribution of income with complete and missing data, where pattern of missing is not at random
+</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="perfect-data-vs-actual-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-quality.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-why_edit_impute.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Editing and Imputation.pdf", "Editing and Imputation.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

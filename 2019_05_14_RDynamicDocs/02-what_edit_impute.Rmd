@@ -1,0 +1,99 @@
+# What does editing and imputation look like?
+At a high level, editing and imputation is the process of correcting erroneous data and filling in missing data. The process of modifying data, by either changing incorrect values or filling in missing values, can be broken down into the following three phases:  
+
+1) Review: Data are examined for potential problems; identifying instances of missingness and incorrect responses  
+2) Select: Data are identified for further treatment. Of those potential problems identified in the review phase, a method is applied to determine which of these erroneous cases need to be corrected or which missing values need to be estimated  
+3) Amend: Changes are applied to the data identified in the select phase by either correcting errors/ filling in missing values, which should help manage the impact of error sources, which in turn will reduce bias and variance, and improve the accuracy and reliability of the data.  
+  
+This model for conceptualising the process of data editing and imputation was developed by the United Nations Economic Commission for Europe [@UNECE]. The three phases could be carried out as data is being collected or post data collection. The next few sections will look closely at each of the three phases; presenting the considerations and introducing the methods applied within each phase.  
+
+## Review
+### What to consider?
+The aim of the review phase is to examine the data and flag values/ units that are potentially problematic to data quality (see Figure 5). In order to identify potential problems in the data, it would be beneficial to understand the risks in the production cycle or “issues” that may already exist. For example, knowledge that some items in the questionnaire require technical expertise may prompt a review of these variables to ensure that respondents have provided correct answers. That is, understanding how the data is produced will help in identifying the error sources that could compromise the accuracy of the statistics. And in turn, awareness of what error sources are present in the production cycle will help target actions and choose appropriate methods for the review phase.  
+  
+![Figure 5. Diagram presenting the flow of the review phase to identify potential problems, whilst the input data remains unchanged](images/Review.png)  
+
+In addition to helping manage the impact of error sources for a given release, identifying potential problems in the review phase will help in evaluating if the data is fit for purpose, and improve the quality of future releases. For example, if respondents have mis-interpreted items relating to pension contribution by reporting their expected income from pension as opposed to the amount contributed, this can be relayed to customers. By communicating these issues, customers of data can determine whether the product is still fit for purpose. Moreover, the problems identified for this release can be used to improve future iterations of the product so that respondents are less likely to mis-interpret the pension contribution items.  
+  
+### How to review data?
+Data can be reviewed using a variety of methods. Table 2 presents a list of data review methods, along with definitions and the utility of each in identifying problems in the dataset. The types of review methods include:  
+  
+- Review of data validity, which ensure that data entered/ provided meet some pre-specified criteria for the variable in question  
+- Review of data plausibility, produces a quantitative measure to reflect the likelihood of a given value/ aggregate being true  
+- Review of units, which checks each unit in the dataset to gauge its quality and impact in producing the key outcome measures  
+
+<span style="color:grey">
+  Table 2. Table presenting the methods of reviewing data for the purpose of identifying potential problems in data processing
+</span>
+![](images/ReviewMethods.svg)  
+  
+## Select
+### What to consider?
+In the select phase, units or fields within units are identified for further treatment; to either change incorrect values or fill in missing values (see Figure 6). When selecting data items, it is important to consider the volume of items being identified for treatment, and the potential impact of each unit on the quality of the data.  
+  
+![Figure 6. Diagram presenting the flow of selecting units/ variables for further treatment in a dataset](images/Select.png)  
+  
+A key objective when selecting data is to change the fewest possible data items to manage an error source. For example, if a unit has provided responses to items A , B and C; whereby items A and B should equal C, but in this case do not (see Table 3), the following set of data items could be selected for amending:  
+  
+1) A  
+2) B  
+3) C  
+4) A and B  
+5) A and C  
+6) B and C  
+
+```{r ABC, echo=FALSE}
+A <- 5
+B <- 6
+C <- 15
+
+SelDat<-cbind(A,B,C)
+
+kable(SelDat, caption="Table 3. Table showing a value from a dataset that has been selected for treatment. It was expected that values for A and B should sum to C.")
+
+```
+  
+It is likely that one of options (1),(2) or (3) would be selected as these require the fewest items to change, in order to correct the error. A larger volume of items selected for change will impact the timeliness and cost of the production. Moreover, there is an argument to retain as much of the original valid responses as it is assumed that these are closer to the truth, relative to the imputed or edited values.  
+  
+The selection of a unit should be made with consideration for the impact that this unit will have on the quality of the data. Units may have varying influence on the estimates produced with the data as a result of varied design weights, or as a result of their percentage contribution to a point estimate. When a large number of units are identified in the review phase as being potentially problematic; selecting those that have a greater impact on data quality is a more effective approach, given time and resource constraints.   
+  
+### How to select data?
+Methods for selecting data (see Table 4) can involve either:   
+  
+- Select entire units from a data set for further treatment  
+- Selecting variables in units for a different treatment than the remaining variables  
+  
+<span style="color:grey">
+  Table 4. Table presenting the methods of selecting data for the purpose of amending units or values
+</span>
+![](images/SelectMethods.svg)
+
+  
+## Amend
+### What to consider?
+In the amend phase, the objective is to change the data values in order to improve data quality (see Figure 7). Units/ variables that were flagged in the select phase are amended to produce a transformed dataset, which should better meet the needs of customers.  
+  
+![Figure 7. Diagram presenting the flow of amending units/ variables to produce a transformed dataset](images/Amend.png)  
+  
+A key objective of the amend phase is to use the appropriate methods and tools to transform the dataset. Most of the considerations in the amend phase will inform analysts on the appropriate methods and tools to use for amending the data.   
+  
+In order to select the appropriate methods and tools for amending a dataset, it is important that analysts understand the data and its issues. These include:  
+  
+1) The type of error in the data; identifying the error source, which resulted in units being selected for treatment. Awareness of the error type in the dataset will help in identifying the root cause, which in turn will help resolve the issue and improve data quality. For example, a number of businesses in a  dataset have been selected for treatment, because the reported revenue was considered too large in the context of other units. Further analysis of this selection reveals that it stems from measurement error; businesses did not report in thousands, which in turn inflated their actual revenue. As a result of identifying the error source, an amend function of converting the figures to thousands will improve the quality of the data.  
+2) Identifying the error generating mechanism. Errors in a dataset may be systematic or random. The former are errors that result in a consistent deviation of estimates from true values; contributing to the bias of outputs. Whereas the latter don’t have any identifiable pattern but can increase the variation of estimates. Identifying  the error generating mechanism will advise on what methods and tools to use in improving data quality; functions that manage bias with systematic errors and those that manage variance with random errors.  
+3) Identifying the type of missingness in the data. The types of missingness include missing completely at random, missing at random or not missing at random. The pattern of missingness will advise how best to estimate for the missing units/ values in the dataset.  
+4) Knowing what data are available to derive estimates of missing or incorrect units/ values. Data that could be used in the amend phase includes the units and variables in the dataset of interest, as well as other related data sources that analysts might have access to.  
+5) The impact of amend actions on the frequency structure of data. Although the data is transformed during the amend phase, it is expected that these changes will not alter the distribution of the variable in question. That is, if the underlying distribution of the variable is assumed to be correct, an amend function should not introduce bias or modify the variance of the data as a result of changing incorrect values and/or filling in missing values.  
+6) Ensuring that automatic changes are a result of edit rules, which are tested and are shown to improve  data quality. Automatic corrections are generally used when there is confidence that the amended data are closer to the truth. As a result, edit rules that result in automatic changes should be verified through testing and specified in the design of the statistical product. Ad hoc/ untested automatic corrections have the risk of introducing more error into the data.  
+7) Ensuring that all edit rules applied are still relevant and accurate for the statistical production. Edit rules that are built into the design of a production cycle should be reviewed; to determine whether the type or mechanism of the error it is addressing has not changed, and whether the edit rules need to be adapted.  
+  
+### How to amend data?
+The aim of the amend phase is to improve the quality of data by addressing the missing and erroneous values and units. By managing the impact of the error sources, the ability to draw inferences of the target population and target concept is in turn improved. The amend functions can be categorised as follows (see Table 5):  
+  
+- Variable amendment. To best capture the target concept, variable amendment is applied; where observed values are altered or missing values are filled in.  
+- Unit amendment.  To best capture the target population, units in the data modified so that the final set of units are in scope, representative of the target population and are compiled correctly.  
+
+<span style="color:grey">
+  Table 5. Table presenting the methods of amending data for the purpose of correcting erroneous values or resolving missing values.
+</span>
+![](images/AmendMethods.svg)
