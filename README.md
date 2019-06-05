@@ -23,6 +23,7 @@ Please note *events are restricted to ONS employees*, unless individual approval
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
+|Tue 11 June 2019 | 14:30 - 15:30 | NPT R.103 | Best Practice == Clean Code | Skevi Pericelous | 9 elements of clean code for best practice, and examples of good/bad practice with discussions for causes, and how code can be improved.
 |Tue 14 May 2019 | 11:00 - 12:00 | NPT R.103 | Show-and-Tell Carousel | Ryan Schofield, Vinny Anand-Kumar, Lewis Edwards | multiple ONS colleagues presenting examples of coding software they've used (R and Python) in their work, and how to get started doing the same
 |Tue 16 Apr 2019 | 10:30 - 11:30 | NPT D.289 | Building Skills for DAP | Isabela Breton | What the Data Science Campus is doing as a partner to build skills for DAP
 |Thur 14 Mar 2019 | 10:00 - 11:00 | NPT D.289 | Be More Functional | Gareth Clews | Gareth live coding in python to give attendants a new view on how to formulate and solve problems.
