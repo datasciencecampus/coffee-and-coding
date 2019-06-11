@@ -1,0 +1,1836 @@
+---
+title: "<font size='4'>Best Practice in Programming for Data Scientists: Clean Code</font>"
+author: "Dr Paraskevi Pericleous"
+
+output: 
+  html_document:
+    theme: united
+    toc: yes
+    toc_float: yes
+---
+
+<style>
+
+img[alt='logo']{
+    width: 31%;
+    height: auto;
+}
+
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 500px;
+margin: 0.25em 0;
+padding: 0.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #8A2BE2;
+}
+
+pre.python, pre.pyspark{
+  background-color: azure;
+  margin-top:15px;
+  border: 1px solid lightgrey;
+  padding: 15px;
+}
+
+pre.r, pre.java{
+  background-color: snow;
+  margin-top:15px;
+  border: 1px solid lightgrey;
+  padding: 15px;
+}
+
+pre.answer{
+  background-color: mintcream;
+  margin-top:15px;
+  border: 1px solid lightgrey;
+  padding: 15px;
+}
+
+button.AnswerButton{
+  background-color: wheat;
+}
+
+.PythonQuestion, .RQuestion, .PythonGoodQuestion, .RGoodQuestion, .Exercise1, .Exercise2, .Exercise3Pythoncode, .Exercise3Rcode, .Exercise4Pythoncode, .Exercise4Rcode{
+  display: none;
+}
+
+div.question{
+  font-family: Calibri;
+  font-size: 20px;
+  font-style: italic;
+  width: 500px;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #0000CD;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library(reticulate)
+use_python("/Library/Frameworks/Python.framework/Versions/3.7/bin/python3")
+```
+
+```{r, echo=FALSE}
+htmltools::img(src = knitr::image_uri("DataScienceCampus.png"), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px;')
+```
+
+<br>
+
+**Audience:** Junior Data Scientists
+
+<br>
+
+**Time:** 1 hour
+
+<br>
+
+**Pre-Requisites:** Familiarity with R or Python is required.
+
+<br>
+
+**Brief Description:** This workshop focuses on best practices in programming in terms of readability. There are some general principles which we can follow in order to improve our coding skills and enable others to read our code and make contributions.
+
+<br>
+
+**Aims, Objectives and Intended Learning Outcomes:** By the end of this workshop you should be familiar with some general principles that will help you start coding in a way that is readable by others without any particular effort. 
+
+<br>
+
+**Acknowledgements:** Many thanks to Ian Grimstead, Mike Hoskin and Isabela Breton for reviewing the material. Also, many thanks to Savvas Stephanides for his harsh criticism throughout the years and the endless times he reviewed and made fun of my code. 
+
+
+<br>
+
+<br>
+
+# 1. Introduction
+
+<br>
+
+<br>
+
+<blockquote>
+
+"always code as if the guy who ends up maintaining your code is a violent psychopath who knows where you live."
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 1.1 Example {.tabset .tabset-fade}
+
+<br>
+
+<div class = "question">
+
+**What does the code below do?**
+
+</div>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def ad_ev_num(x):
+  ev_nu = sum([i for i in x if i % 2 == 0])
+  return(ev_nu)
+```
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.PythonQuestion').style.display = 'block';">Show Answer</button>
+
+<div class='PythonQuestion'>
+
+```{python}
+ad_ev_num((1,2,3,4))
+```
+
+</div>
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+f <- function(x){
+  s <- sum(x[x %% 2 ==0])
+  return(s)
+}
+```
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.RQuestion').style.display = 'block';">Show Answer</button>
+
+<div class='RQuestion'>
+
+```{r}
+f(c(1,2,3,4))
+```
+
+</div>
+
+<br>
+
+<br>
+
+## 1.2 Better Example {.tabset .tabset-fade}
+
+<br>
+
+<div class = "question">
+
+**What does the code below do?**
+
+</div>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers):
+  even_numbers = get_even_numbers(numbers)
+  sum_of_even_numbers = sum(even_numbers)
+  return sum_of_even_numbers
+```
+
+```{python}
+def get_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if is_even(each_number)]
+  return even_numbers
+```
+
+```{python}
+def is_even(number):
+  return number % 2 == 0
+```
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.PythonGoodQuestion').style.display = 'block';">Show Answer</button>
+
+<div class='PythonGoodQuestion'>
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+</div>
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers<-function(numbers){
+  evenNumbers = getEvenNumbers(numbers)
+  sumOfEvenNumbers = sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+getEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[areEven(numbers)]
+  return(evenNumbers)
+}
+```
+
+```{r}
+areEven <- function(numbers){
+  return(numbers %% 2 == 0)
+}
+```
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.RGoodQuestion').style.display = 'block';">Show Answer</button>
+
+<div class='RGoodQuestion'>
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+</div>
+
+<br>
+
+<br>
+
+## 1.3 What is clean code
+
+<br>
+
+<br>
+
+<blockquote>
+
+"Clean code is code that is easy to understand and easy to change."
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 1.4 Why should we care
+
+<br>
+
+<br>
+
+As Data Scientists we need to create a product using code. Most of the times this product will be used or modified by others. These could be your teammates, other programmers who want to improve/change your code, or just users.
+
+By using clean code and making the code readable it will save you and others time in the future and be easier to find, test, and fix bugs. 
+
+<br>
+
+<br>
+
+<blockquote>
+
+"Code is like humor. When you have to explain it, it’s bad" 
+
+</blockquote>
+
+<br>
+
+<br>
+
+# 2. Names
+
+<br>
+
+<br>
+
+The names of variables, functions and classes need to be descriptive (intention-revealing), pronounceable and need to reflect what a function does and what the variables are.
+
+As a general rule keep the names of the variables and classes as nouns and the names of the functions as verbs. 
+
+<br>
+
+<br>
+
+<blockquote>
+
+“You should name a variable using the same care with which you name a first-born child.” 
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 2.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+n = 10
+
+no_patients = 10
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+no_pat = 10
+
+pat = 10
+```
+
+<br>
+
+<br>
+
+## 2.2 Best Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python 
+
+<br>
+
+<br>
+
+Variable Name:
+
+```{python}
+number_of_patients = 10
+```
+
+<br>
+
+Class Name: 
+
+```{pyspark}
+PatientService
+```
+
+<br>
+
+Function Name:
+
+```{pyspark}
+get_number_of_patients()
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+Variable Name:
+
+```{r}
+numberOfPatients = 10
+```
+
+<br>
+
+or
+
+<br>
+
+```{r}
+number_of_patients = 10
+```
+
+<br>
+
+**Note:** `number.of.patients` is widely used and even considered best practice among R users. However, as Data Scientists we are expected to be able to move around different languages and that would be restrictive in any other language. Therefore, we do not recommend it.
+
+
+<br>
+
+<br>
+
+Function Name:
+
+```{java}
+getNumberOfPatients()
+```
+
+<br>
+
+or
+
+<br>
+
+```{java}
+get_number_of_patients()
+```
+
+<br>
+
+<br>
+
+Class Name:
+
+```{java}
+PatientService
+```
+
+<br>
+
+**Note:** Classes are not widely used in R.
+
+<br>
+
+<br>
+
+# 3. Information
+
+<br>
+
+<br>
+
+Avoid false information. Do not use names like `studentAchievementTable` when in fact this is not a Table, but a list.
+
+<br>
+
+<br>
+
+<blockquote>
+
+“Programmers must avoid leaving false clues that obscure the meaning of code.” 
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 3.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+gender = (1, 2, 1, 1, 2, 2, 2)
+
+grades_prediction_model = 10
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+gender <- c(1, 2, 1, 1, 2, 2, 2)
+
+gradesPredictionModel <- 10
+```
+
+<br>
+
+<br>
+
+## 3.2 Best Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+```{pyspark}
+gender = ('male', 'female', 'male', 'male', 'female', 'female', 'female')
+
+grades_prediction_model = 50 + 20 * (gender == 'male') + 30 * (gender == 'female') 
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{java}
+gender <- c('male', 'female', 'male', 'male', 'female', 'female', 'female')
+
+gradesPredictionModel = 50 + 20 * (gender == 'male') + 30 * (gender == 'female') 
+```
+
+<br>
+
+<br>
+
+# 4. One line code
+
+<br>
+
+<br>
+
+This is not necessarily bad. However, sacrificing readibility, just to make code shorter is. Being efficient with writing does not always lead to a code that is readable. 
+
+Usually there is no speed advantage in writing the code into one line - maintainability and readability are far more important unless there's a very good reason (e.g. 20mins becomes 1 min).
+
+<br>
+
+<br>
+
+## 4.1 Bad Practice {.tabset .tabset-fade}
+
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers): return sum([each_number for each_number in numbers if each_number % 2 == 0])
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers<-function(numbers){return(sum(numbers[numbers %% 2 ==0]))}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+## 4.2 Better Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers): 
+  even_numbers = [each_number for each_number in numbers if each_number % 2 == 0]
+  sum_of_even_numbers = sum(even_numbers)
+  return sum_of_even_numbers
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[numbers %% 2 ==0]
+  sumOfEvenNumbers <- sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+# 5. Distinct (Ubiquitous language)
+
+<br>
+
+<br>
+
+Make meaningful distinctions. Do not use the same name for two (or more) distinct items. Use the same term in the code, in the documents and when talking to customers. 
+
+eg Do not use the `cancer` name for the Data and the model. Use `cancerData` and `cancerModel` for the Data and model respectively. The same is true for Dataframes and columns of the Dataframes.
+
+<br>
+
+<br>
+
+## 5.1 Bad Practice  {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+```{python}
+import pandas as pd
+```
+
+```{python}
+cancer = {'patient_id': [1, 2, 3, 4], 'cancer': [1, 1, 2, 3]}
+cancer = pd.DataFrame(cancer)
+cancer
+```
+
+<br>
+
+or
+
+<br>
+
+```{python}
+cancer1 = {'patient_id': [1, 2, 3, 4], 'cancer':[1, 1, 2, 3]}
+cancer2 = pd.DataFrame(cancer1)
+cancer2
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+cancer<- c(1, 1, 2, 3) 
+patientId<- c(1, 2, 3, 4)
+
+cancer<-cbind(patientId, cancer)
+cancer
+```
+
+<br>
+
+or
+
+<br>
+
+```{r}
+cancer<- c(1, 1, 2, 3) 
+patientId<- c(1, 2, 3, 4)
+
+cancer2<-cbind(patientId, cancer)
+cancer2
+```
+
+<br>
+
+<br>
+
+## 5.2 Better Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+```{python}
+import pandas
+```
+
+```{python}
+patient_cancer_list = [
+  {'patient_id': 1, 'cancer_stage': 1},
+  {'patient_id': 2, 'cancer_stage': 1},
+  {'patient_id': 3, 'cancer_stage': 2},
+  {'patient_id': 4, 'cancer_stage': 4}]
+  
+patient_cancer_dataframe = pandas.DataFrame(patient_cancer_list)
+patient_cancer_dataframe
+```
+
+<br>
+
+**Note:** `patient_cancer_list` is a list of dictionaries.
+
+**Note:** Naming dataframes as `df` is bad practice.
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+library(plyr)
+
+patientCancerList <- list(
+  list('patientId' = 1, 'cancerStage' = 1),
+  list('patientId' = 2, 'cancerStage' = 1),
+  list('patientId' = 3, 'cancerStage' = 2),
+  list('patientId' = 4, 'cancerStage' = 4))
+
+patientCancerDataframe <- ldply(patientCancerList, data.frame)
+patientCancerDataframe
+```
+
+<br>
+
+<br>
+
+# 6. Self-documentation
+
+<br>
+
+<br>
+
+Code should be self-documented. This means no unnecessary comments at all. Put the effort to improve, organize and structure your code i.e. clean it.
+
+Any other documentation (eg. comments) can fall out of sync with the code - and then become worse than useless. It is a lie! The single point of truth is always the executable code.
+
+<br>
+
+<br>
+
+<blockquote>
+
+“A long descriptive name is better than a short enigmatic name. A long descriptive name is better than a long descriptive comment.” 
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 6.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+#this function returns the sum of all even vector elements 
+def ad_ev_num(x):
+  ev_nu = sum([i for i in x if i % 2 == 0]) #sums every element, if the element is even 
+  return(ev_nu)
+```
+
+```{python}
+ad_ev_num((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+```{r}
+#this function returns the sum of all even vector elements 
+f <- function(x){
+  s <- sum(x[x %% 2 ==0])#find the even numbers and gets their sum
+  return(s)
+}
+```
+
+```{r}
+f(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+## 6.2 Better Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python 
+
+<br>
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if each_number % 2 == 0]
+  sum_of_even_numbers = sum(even_numbers) 
+  return(sum_of_even_numbers)
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers <- function(numbers){
+  evenNumbers <- numbers[numbers %% 2 ==0]
+  sumOfEvenNumbers <- sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+# 7. Well and only (no side effects)
+
+<br>
+
+<br>
+
+Each function should do one task, and one task only. That task should be done well, and in a robust way. If a function does more than one task, it should be split into multiple functions, where each function does one sub-task. A function should not do other things in the background, just the single task its written for.   
+
+Akin to `Single Responsibility`. The idea it to keep the code together that can get damaged for the same reason of change ('Keep together what can be damaged together'). When changing something you want to impact as few things as possible. However, thousands of tiny functions will be painful to read.
+
+Never keep code that's not used - its confusing and usually falls behind in maintenance so it can't be used (the same goes for carrying code without using it).
+
+<br>
+
+<br>
+
+<blockquote>
+
+“The first rule of functions is that they should be small. The second rule of functions is that they should be smaller than that.” 
+
+</blockquote>
+
+<br>
+
+<br>
+
+<blockquote>
+
+“Flag arguments are ugly. Passing a boolean into a function is a truly terrible practice.” 
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 7.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if each_number % 2 == 0]
+  even_number_count = len(even_numbers)
+  sum_of_even_numbers = sum(even_numbers) 
+  return(sum_of_even_numbers)
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers <- function(numbers){
+  evenNumbers <- numbers[numbers %% 2 ==0]
+  evenNumbersCount <- length(evenNumbers)
+  sumOfEvenNumbers <- sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+## 7.2 Best Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python 
+
+<br>
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers):
+  even_numbers = get_even_numbers(numbers)
+  sum_of_even_numbers = sum(even_numbers)
+  return sum_of_even_numbers
+```
+
+```{python}
+def get_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if is_even(each_number)]
+  return even_numbers
+```
+
+```{python}
+def is_even(number):
+  return number % 2 == 0
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers<-function(numbers){
+  evenNumbers = getEvenNumbers(numbers)
+  sumOfEvenNumbers = sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+getEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[areEven(numbers)]
+  return(evenNumbers)
+}
+```
+
+```{r}
+areEven <- function(numbers){
+  return(numbers %% 2 == 0)
+}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+# 8. Keep it Simple
+
+<br>
+
+<br>
+
+Keep as few arguments as possible when creating a function.
+
+If your function has too many arguments, perhaps the function is doing too much and you need to split it. Remember, the simpler the code, the simpler it is to test it.
+
+<br>
+
+<br>
+
+## 8.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def count_even_numbers(first_number, second_number, third_number, fourth_number, fifth_number):
+  given_numbers = (first_number, second_number, third_number, fourth_number, fifth_number)
+  even_numbers = get_even_numbers(given_numbers)
+  even_numbers_count = len(even_numbers)
+  return even_numbers_count
+```
+
+```{python}
+def get_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if is_even(each_number)]
+  return even_numbers
+```
+
+```{python}
+def is_even(number):
+  return number % 2 == 0
+```
+
+```{python}
+count_even_numbers(1,2,3,4,5)
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+countEvenNumbers <- function(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber){
+  givenNumbers <- c(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber)
+  evenNumbers <- getEvenNumbers(givenNumbers)
+  evenNumbersCount <- length(evenNumbers)
+  return (evenNumbersCount)
+}
+```
+
+```{r}
+getEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[areEven(numbers)]
+  return(evenNumbers)
+}
+```
+
+```{r}
+areEven <- function(numbers){
+  return(numbers %% 2 == 0)
+}
+```
+
+```{r}
+countEvenNumbers(1,2,3,4,5)
+```
+
+<br>
+
+<br>
+
+## 8.2 Best Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python 
+
+<br>
+
+<br>
+
+```{python}
+def count_even_numbers(numbers):
+  even_numbers = get_even_numbers(numbers)
+  even_numbers_count = len(even_numbers)
+  return even_numbers_count
+```
+
+```{python}
+def get_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if is_even(each_number)]
+  return even_numbers
+```
+
+```{python}
+def is_even(number):
+  return number % 2 == 0
+```
+
+```{python}
+count_even_numbers((1,2,3,4,5))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+countEvenNumbers <- function(numbers){
+  evenNumbers <- getEvenNumbers(numbers)
+  evenNumbersCount <- length(evenNumbers)
+  return (evenNumbersCount)
+}
+```
+
+```{r}
+getEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[areEven(numbers)]
+  return(evenNumbers)
+}
+```
+
+```{r}
+areEven <- function(numbers){
+  return(numbers %% 2 == 0)
+}
+```
+
+```{r}
+countEvenNumbers(c(1,2,3,4,5))
+```
+
+<br>
+
+<br>
+
+# 9. Nesting
+
+<br>
+
+<br>
+
+You should always avoid nesting as it make the code harder to read and understand.
+
+<br>
+
+<br>
+
+## 9.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+first_element = (-1)
+second_element = (-2)
+third_element = (-3)
+
+if (first_element < 0):
+  if (second_element < 0):
+    if (third_element < 0): 
+      print('all negatives')
+```
+
+<br>
+
+or even 
+
+<br>
+
+```{python}
+if (first_element < 0 and second_element < 0 and third_element < 0): 
+  print('all negatives')
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+firstElement <- (-1)
+secondElement <- (-2)
+thirdElement <- (-3)
+
+if (firstElement < 0){
+    if (secondElement < 0){
+      if (thirdElement < 0){
+        print('all negatives')}}}      
+```
+
+<br>
+
+or even
+
+<br>
+
+```{r}
+if (firstElement < 0 & secondElement < 0 & thirdElement < 0){
+  print('all negatives')
+}
+```
+
+<br>
+
+<br>
+
+## 9.2 Best Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python 
+
+<br>
+
+<br>
+
+```{python}
+def all_elements_negative(elements):
+  positive_elements = get_positive_elements(elements)
+  number_of_positive_elements = len(positive_elements)
+  return number_of_positive_elements == 0 
+```
+
+```{python}
+def get_positive_elements(elements):
+  positive_elements = [each_element for each_element in elements if each_element > 0]
+  return positive_elements
+```
+
+```{python}
+all_elements = [first_element, second_element, third_element]
+if (all_elements_negative(all_elements)):
+  print('all_negatives')
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+allElementsNegative <- function(elements){
+  positiveElements <- getPositiveElements(elements)
+  numberOfPositiveElements <- length(positiveElements)
+  return (numberOfPositiveElements == 0)
+}
+```
+
+```{r}
+getPositiveElements<-function(numbers){
+  positiveElements <- numbers[numbers > 0]
+  return(positiveElements)
+}
+```
+
+```{r}
+allElements <- c(firstElement, secondElement, thirdElement)
+if (allElementsNegative(allElements)){
+  print('all negatives')
+}
+```
+
+<br>
+
+<br>
+
+# 10. Read like a story-book
+
+<br>
+
+<br>
+
+Code needs to have a format and read like a story-book (from top to bottom). First, there is a title which shows what the code is about, then the first paragraph which briefly describes what the code does and then more details follow. 
+
+The function calling is above and the function being called is below. The order of the functions is the order that they are called.
+
+<br>
+
+<br>
+
+<blockquote>
+
+"We would like a source file to be like a newspaper article. The name should be simple but explanatory. The name, by itself, should be sufficient to tell us whether we are in the right module or not. The topmost parts of the source file should provide the high-level Formatting concepts and algorithms. Detail should increase as we move downward, until at the end we find the lowest level functions and details in the source file."
+
+</blockquote>
+
+<br>
+
+<br>
+
+## 10.1 Bad Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python
+
+<br>
+
+<br>
+
+```{python}
+def get_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if is_even(each_number)]
+  return even_numbers
+```
+
+```{python}
+def get_sum_of_even_numbers(numbers):
+  even_numbers = get_even_numbers(numbers)
+  sum_of_even_numbers = sum(even_numbers)
+  return sum_of_even_numbers
+```
+
+```{python}
+def is_even(number):
+  return number % 2 == 0
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[areEven(numbers)]
+  return(evenNumbers)
+}
+```
+
+```{r}
+getSumOfEvenNumbers <- function(numbers){
+  evenNumbers = getEvenNumbers(numbers)
+  sumOfEvenNumbers = sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+areEven <- function(numbers){
+  return(numbers %% 2 == 0)
+}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+## 10.2 Best Practice {.tabset .tabset-fade}
+
+<br>
+
+<br>
+
+### Python 
+
+<br>
+
+```{python}
+def get_sum_of_even_numbers(numbers):
+  even_numbers = get_even_numbers(numbers)
+  sum_of_even_numbers = sum(even_numbers)
+  return sum_of_even_numbers
+```
+
+```{python}
+def get_even_numbers(numbers):
+  even_numbers = [each_number for each_number in numbers if is_even(each_number)]
+  return even_numbers
+```
+
+```{python}
+def is_even(number):
+  return number % 2 == 0
+```
+
+```{python}
+get_sum_of_even_numbers((1,2,3,4))
+```
+
+<br>
+
+<br>
+
+### R
+
+<br>
+
+<br>
+
+```{r}
+getSumOfEvenNumbers<-function(numbers){
+  evenNumbers = getEvenNumbers(numbers)
+  sumOfEvenNumbers = sum(evenNumbers)
+  return(sumOfEvenNumbers)
+}
+```
+
+```{r}
+getEvenNumbers<-function(numbers){
+  evenNumbers <- numbers[areEven(numbers)]
+  return(evenNumbers)
+}
+```
+
+```{r}
+areEven <- function(numbers){
+  return(numbers %% 2 == 0)
+}
+```
+
+```{r}
+getSumOfEvenNumbers(c(1,2,3,4))
+```
+
+<br>
+
+<br>
+
+# Exercises
+
+<br>
+
+<br>
+
+1. Name the variable that describes the minimum number of an array.
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.Exercise1').style.display = 'block';">Show Answer</button>
+
+<div class = "Exercise1">
+
+```{answer}
+Variable: "minimumNumber" or "minimum_number"
+```
+
+</div>
+
+<br>
+
+<br>
+
+2. Name the number which is the maximum number between the two minimum numbers of two arrays and name the function that does this.
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.Exercise2').style.display = 'block';">Show Answer</button>
+
+<div class = "Exercise2">
+
+```{answer}
+Variable: 
+  
+"maximumNumberFromTwoMinimum" or "maximum_number_from_two_minimum" (or "maximumNumberFromMinimums" or "maximum_number_from_minimums"). 
+
+
+Function: 
+
+"getmaximumNumberFromTwoMinimum" or "get_maximum_number_from_two_minimum" (or "getMaximumNumberFromMinimums" or 
+
+"get_maximum_number_from_minimums)
+```
+
+</div>
+
+<br>
+
+<br>
+
+3. Notice how the code in point 9. `nesting` did not include zero as part of the conditions. Write your own program that prints 'all positive' if all 3 elements are larger than zero.
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.Exercise3Pythoncode').style.display = 'block';">Show Python Answer</button>
+
+<div class = "Exercise3Pythoncode">
+```{python}
+def all_elements_positive(elements):
+  nonpositive_elements = get_nonpositive_elements(elements)
+  number_of_nonpositive_elements = len(nonpositive_elements)
+  return number_of_nonpositive_elements == 0 
+```
+
+```{python}
+def get_nonpositive_elements(elements):
+  nonpositive_elements = [each_element for each_element in elements if each_element <= 0]
+  return nonpositive_elements
+```
+
+```{python}
+first_element = (+1)
+second_element = (+2)
+third_element = (+3)
+
+all_elements = [first_element, second_element, third_element]
+if (all_elements_positive(all_elements)):
+  print('all_positives')
+```
+
+</div>
+
+<br>
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.Exercise3Rcode').style.display = 'block';">Show R Answer</button>
+
+<div class = "Exercise3Rcode">
+
+```{r}
+allElementsPositive <- function(elements){
+  nonPositiveElements <- getNonPositiveElements(elements)
+  numberOfNonPositiveElements <- length(nonPositiveElements)
+  return (numberOfNonPositiveElements == 0)
+}
+```
+
+```{r}
+getNonPositiveElements <- function(numbers){
+  nonPositiveElements <- numbers[numbers <= 0]
+  return(nonPositiveElements)
+}
+```
+
+```{r}
+firstElement <- (+1)
+secondElement <- (+2)
+thirdElement <- (+3)
+
+allElements <- c(firstElement, secondElement, thirdElement)
+if (allElementsPositive(allElements)){
+  print('all positives')
+}
+```
+
+</div>
+
+<br>
+
+<br>
+
+4. Write a function that returns the maximum number between the two minimum numbers of two arrays. 
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.Exercise4Pythoncode').style.display = 'block';">Show Python Answer</button>
+
+<div class = "Exercise4Pythoncode">
+```{python}
+def get_maximum_from_minimums(vector_list):
+  minimum_numbers = get_minimum_for_each_vector(vector_list)
+  maximum_number_from_minimums = max(minimum_numbers)
+  return maximum_number_from_minimums
+```
+
+```{python}
+def get_minimum_for_each_vector(vector_list):
+  minimum_numbers = [min(each_vector) for each_vector in vector_list]
+  return (minimum_numbers)
+```
+
+```{python}
+first_vector = (1,2,3,4)
+second_vector = (5,6,7,8,9,10)
+vector_list = [first_vector, second_vector] 
+
+get_maximum_from_minimums(vector_list)
+```
+
+</div>
+
+<br>
+
+<br>
+
+<button class="AnswerButton" onclick="document.querySelector('.Exercise4Rcode').style.display = 'block';">Show R Answer</button>
+
+<div class='Exercise4Rcode'>
+
+```{r}
+getMaximumFromMinimums <- function(vectorList){
+  minimumNumbers <- getMinimumForEachVector(vectorList) 
+  maximumNumberFromMinimums <- max(minimumNumbers)
+  return(maximumNumberFromMinimums)
+}
+```
+
+```{r}
+getMinimumForEachVector <- function(vectorList){
+  minimumNumbers <- sapply(vectorList,min)
+  return(minimumNumbers)
+}
+```
+
+```{r}
+firstVector = c(1,2,3,4)
+secondVector = c(5,6,7,8,9,10)
+vectorList = list(firstVector, secondVector) 
+
+getMaximumFromMinimums(vectorList)
+```
+
+</div>
+
+<br>
+
+<br>
+
+#Further Reading
+
+<br>
+
+<br>
+
+1. Clean Code: A Handbook of Agile Software Craftsmanship, Robert C. Martin, Prentice Hall, 2009
+https://www.investigatii.md/uploads/resurse/Clean_Code.pdf
+
+<br>
+
+2. PEP 8 -- Style Guide for Python Code, https://www.python.org/dev/peps/pep-0008/
+
+<br>
+
+3. Google's R Style Guide, https://google.github.io/styleguide/Rguide.xml 
+
+<br>
+
+4. The State of Naming Conventions in R, 2012, https://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf
+
+<br>
+
+<br>
+
+#What next
+
+<br>
+
+<br>
+
+1. Fundamentals of Objected-Oriented Programming 
+
+2. Unit Testing
+
+3. Integration Testing
+
+
+<br>
+
+<br>
+
+<blockquote>
+
+“Code, without tests, is not clean. No matter how elegant it is, no matter how readable and accessible, if it hath not tests, it be unclean''
+
+</blockquote>
+
+
+
