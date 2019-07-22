@@ -6,8 +6,8 @@ A _public_ repository to hold resources and notes from ONS Coffee & Coding sessi
 
 Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for future events.
 
-### Contributing 
-Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request. 
+### Contributing
+Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request.
 
 Folders should adhere to the following conventions:
 
@@ -19,16 +19,16 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-reproducible-analytical-pipelines-rap-tickets-63103007795).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-the-principles-and-practice-of-git-tickets-65090807357).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
-|Mon 22 July 2019 | 14:00 - 15:00 | NPT R.103 | Reproducible Analytical Pipelines (RAP) | Catrin Cheung and Josh Halls | Introduction to RAP, and how they can be used to improve the quality and efficiency of our statistics
-|Tue 11 June 2019 | 14:30 - 15:30 | NPT R.103 | Best Practice == Clean Code | Skevi Pericelous | 9 elements of clean code for best practice, and examples of good/bad practice with discussions for causes, and how code can be improved.
+|Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | Git time| Fero Hajnovic & Jacob Hamblin-pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS| 
+|Mon 22 Jul 2019 | 14:00 - 15:00 | NPT R.103 | Reproducible Analytical Pipelines (RAP) | Catrin Cheung and Josh Halls | Introduction to RAP, and how they can be used to improve the quality and efficiency of our statistics
+|Tue 11 Jun 2019 | 14:30 - 15:30 | NPT R.103 | Best Practice == Clean Code | Skevi Pericelous | 9 elements of clean code for best practice, and examples of good/bad practice with discussions for causes, and how code can be improved.
 |Tue 14 May 2019 | 11:00 - 12:00 | NPT R.103 | Show-and-Tell Carousel | Ryan Schofield, Vinny Anand-Kumar, Lewis Edwards | multiple ONS colleagues presenting examples of coding software they've used (R and Python) in their work, and how to get started doing the same
 |Tue 16 Apr 2019 | 10:30 - 11:30 | NPT D.289 | Building Skills for DAP | Isabela Breton | What the Data Science Campus is doing as a partner to build skills for DAP
 |Thur 14 Mar 2019 | 10:00 - 11:00 | NPT D.289 | Be More Functional | Gareth Clews | Gareth live coding in python to give attendants a new view on how to formulate and solve problems.
 |Tue 19 Feb 2019 | 10:00 - 11:00 | NPT D.289 | Problem Solving with LEGO | Ian Grimstead | Interactive session (involving LEGO!) thinking about good practices involve in solving problems with code.
 |Tue 15 Jan 2019 | 10:00 - 11:00 | NPT D.289 | "What is Coffee and Coding?", Lightning Talk: two mentoring programs | Rose Almond & Skevi Pericelous | What Coffee and Coding is, a description of Data Science mentoring programs and how to apply, and then a Code Surgery (with R standards game)
 |Tue 27 Nov 2018 | 10:00 - 12:00 | NPT R103 | "What is Coffee and Coding?" and "An Introduction to Data Science Tools" | Luke Shaw & David Pugh | What Coffee and Coding is across government and the plan for ONS, and an introduction to some of the various tools used in Data Science and when to use them - with a focus on R and Python.
-
