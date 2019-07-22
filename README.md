@@ -23,7 +23,7 @@ Please note *events are restricted to ONS employees*, unless individual approval
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
-|Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | Git time| Fero Hajnovic & Jacob Hamblin-pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS| 
+|Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | The principles and practices of Git | Fero Hajnovic & Jacob Hamblin-pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS|
 |Mon 22 Jul 2019 | 14:00 - 15:00 | NPT R.103 | Reproducible Analytical Pipelines (RAP) | Catrin Cheung and Josh Halls | Introduction to RAP, and how they can be used to improve the quality and efficiency of our statistics
 |Tue 11 Jun 2019 | 14:30 - 15:30 | NPT R.103 | Best Practice == Clean Code | Skevi Pericelous | 9 elements of clean code for best practice, and examples of good/bad practice with discussions for causes, and how code can be improved.
 |Tue 14 May 2019 | 11:00 - 12:00 | NPT R.103 | Show-and-Tell Carousel | Ryan Schofield, Vinny Anand-Kumar, Lewis Edwards | multiple ONS colleagues presenting examples of coding software they've used (R and Python) in their work, and how to get started doing the same
