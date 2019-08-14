@@ -19,11 +19,12 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-the-principles-and-practice-of-git-tickets-65090807357).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-department-for-transport-r-extravaganza-tickets-68598743689).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
-|Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | The principles and practice of Git | Fero Hajnovic & Jacob Hamblin-pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS|
+|Thur 12 Sept 2019 | 11:00 - 12:00 | NPT D.289 | Department for Transport R Extravaganza | Tamsin Forbes & Hannah Bougdah | Presenting from their just out R-cookbook, aimed at DfT analysts |
+|Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | The principles and practice of Git | Fero Hajnovic & Jacob Hamblin-Pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS|
 |Mon 22 Jul 2019 | 14:00 - 15:00 | NPT R.103 | Reproducible Analytical Pipelines (RAP) | Catrin Cheung and Josh Halls | Introduction to RAP, and how they can be used to improve the quality and efficiency of our statistics
 |Tue 11 Jun 2019 | 14:30 - 15:30 | NPT R.103 | Best Practice == Clean Code | Skevi Pericelous | 9 elements of clean code for best practice, and examples of good/bad practice with discussions for causes, and how code can be improved.
 |Tue 14 May 2019 | 11:00 - 12:00 | NPT R.103 | Show-and-Tell Carousel | Ryan Schofield, Vinny Anand-Kumar, Lewis Edwards | multiple ONS colleagues presenting examples of coding software they've used (R and Python) in their work, and how to get started doing the same
