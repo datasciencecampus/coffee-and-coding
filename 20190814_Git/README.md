@@ -5,4 +5,4 @@ Fero Hajnovic and Jacob Hamblin-pyke took us through understanding the main conc
 
 Check out their slides, the last slide gives an overview of what they got up to and an example of the live demo:
 
-<img src="git-overview-slide.pdfNG" width="400" align="right">
+<img src="/git-overview-slide.png" width="400" align="right">
