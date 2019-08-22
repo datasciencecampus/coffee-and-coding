@@ -34,7 +34,7 @@ Presenters
 
 We publicise events in the following way:
 * GitHub Page
-* RAS RoundUp (email: newport.ras@ons.gov.uk)
+* RAS RoundUp (email: newport.ras@ons.gov.uk) - see template in coffee.coding@ons.gov.uk inbox 
 * Reggie Event  (email:  News@ons.gov.uk with Eventbrite link)
 
 ### Asking for feedback:
