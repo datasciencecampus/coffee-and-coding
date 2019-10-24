@@ -27,7 +27,7 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 
 ### Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-department-for-transport-r-extravaganza-tickets-68598743689).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-overview-of-code-testing-tickets-71531212783).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
