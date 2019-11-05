@@ -31,6 +31,8 @@ Please note *events are restricted to ONS employees*, unless individual approval
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
+|Tues 17 Dec 2019 | 10:30 - 11:30 | NPT D.289 | DAPCATS RAP Demo | Wil Roberts | Demonstration of using a Reproducible Analytical Pipeline within DAP. |
+|Wed 27 Nov 2019 | 14:00 - 15:00 | Coffee Shop | Coffee & Coding Code Surgery | - | Bring your laptop to the coffee shop and get help with any coding problems you're having. |
 |Tues 12 Nov 2019 | 11:00 - 12:00 | NPT D.289 | Overview of Code Testing | David Pugh | An introduction and overview of different testing approaches, discussing why we would test and trying to decide the best testing approach to use. We will also look at a worked example of Test Driven Development. |
 |Thur 12 Sept 2019 | 11:00 - 12:00 | NPT D.289 | Department for Transport R Extravaganza | Tamsin Forbes & Hannah Bougdah | Presenting from their just out R-cookbook, aimed at DfT analysts |
 |Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | The principles and practice of Git | Fero Hajnovic & Jacob Hamblin-Pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS|
