@@ -30,9 +30,9 @@ The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vib
 Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-overview-of-code-testing-tickets-71531212783).
 
 |Date| Time | Room | Title | Presenter | Abstract|
-|:--------------|:----|:---|:---------|:--------------------|:-------------------------------|
-|Tues 17 Dec 2019 | 10:30 - 11:30 | NPT D.289 | DAPCATS RAP Demo | Wil Roberts | Demonstration of using a Reproducible Analytical Pipeline within DAP. |
-|Wed 27 Nov 2019 | 14:00 - 15:00 | Coffee Shop | Coffee & Coding Code Surgery Drop-In Session | - | An opportunity to discuss any coding problems you are having or perhaps find better ways of solving issues. Open to coders of any level or those who have not started yet and want some guidance on how to begin. |
+|:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
+| Tues 17 Dec 2019 | 10:30 - 11:30 | NPT D.289 | DAPCATS RAP Demo | Wil Roberts | Demonstration of using a Reproducible Analytical Pipeline within DAP. |
+| Wed 27 Nov 2019 | 14:00 - 15:00 | Coffee Shop | Coffee & Coding Code Surgery Drop-In Session | - | An opportunity to discuss any coding problems you are having or perhaps find better ways of solving issues. <br>Open to coders of any level or those who have not started yet and want some guidance on how to begin. |
 |Tues 12 Nov 2019 | 11:00 - 12:00 | NPT D.289 | Overview of Code Testing | David Pugh | An introduction and overview of different testing approaches, discussing why we would test and trying to decide the best testing approach to use. We will also look at a worked example of Test Driven Development. |
 |Thur 12 Sept 2019 | 11:00 - 12:00 | NPT D.289 | Department for Transport R Extravaganza | Tamsin Forbes & Hannah Bougdah | Presenting from their just out R-cookbook, aimed at DfT analysts |
 |Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | The principles and practice of Git | Fero Hajnovic & Jacob Hamblin-Pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS|
