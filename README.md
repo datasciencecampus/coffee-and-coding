@@ -24,7 +24,7 @@ The Reproducible Analytical Pipeline (RAP) is a methodology for automating the b
 
 Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-rap-in-dap-tickets-80904907757)
 
-### Contributing
+## Contributing
 Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request.
 
 Folders should adhere to the following conventions:
@@ -32,12 +32,12 @@ Folders should adhere to the following conventions:
 * `YYYYMMDD_Topic_Name`
 * All folders should contain a `README.md` with notes or a brief explanation
 
-### Aim
+## Aim
 The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vibrant, supportive and inclusive coding community at ONS. Coffee & Coding provides a regular opportunity for people within ONS who are interested in coding to share skills and knowledge, provide advice and guidance to each other and generally network and get to know each other. <br>The format is generally 40 minutes for a presentation and questions to the presenter/s followed by an informal Code Surgery. The presentations usually take the form of a demonstration of a tool or technique and/or a show and tell of work done within the department using these methods. From time to time we will invite external speakers. The Code Surgery provides the opportunity for people to pose any coding related queries/ruminations/ideas to the gathered coding community.
 
 Since there is often not enough time at the end of sessions for the Code Surgery we are considering running hour-long drop-in Code Surgeries, in the coffee shop, in addition to the presentation based monthly Coffee & Coding sessions. <br>The first drop-in Code Surgery will take place 10:30-11:30 on Wednesday 27 November. 
 
-### Coffee & Coding Schedule
+## Coffee & Coding Schedule
 
 Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-overview-of-code-testing-tickets-71531212783).
 
