@@ -8,11 +8,21 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-Our next event will be 11:00-12:00 on Tuesday 12 November 2019 in NPT D.289.
+### Code Surgery
 
-David Pugh will give an introduction and overview of different testing approaches, discussing why we would test and trying to decide the best testing approach to use. We will also look at a worked example of Test Driven Development.
+On Wednesday 27 November (10:30-11:30) we are planning to run our first hour-long drop-in Code Surgery session in the coffee shop. 
 
-Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-overview-of-code-testing-tickets-71531212783)
+This will be an opportunity to discuss any coding problems you are having, or perhaps find better ways of solving issues. Open to coders of any level or those who have not started yet and want some guidance on how to begin. 
+
+Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-coding-surgery-drop-in-session-tickets-80907405227)
+
+### Our Next Presentation Event
+
+Our next event will be 10:30-11:30 on Tuesday 17 December 2019 in NPT D.289.
+
+The Reproducible Analytical Pipeline (RAP) is a methodology for automating the bulk of the steps involved in creating a statistical report. Wil Roberts' beginner-to-intermediate interactive session will demonstrate some good practices in building RAP in DAP.
+
+Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-rap-in-dap-tickets-80904907757)
 
 ### Contributing
 Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request.
@@ -35,7 +45,7 @@ Please note *events are restricted to ONS employees*, unless individual approval
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
 | Tues 17 Dec 2019 | 10:30 - 11:30 | NPT D.289 | RAP in DAP | Wil Roberts | The Reproducible Analytical Pipeline (RAP) is a methodology for automating the bulk of the steps involved in creating a statistical report.  This beginner-to-intermediate interactive session will demonstrate some good practices in building RAP in DAP. |
 | Wed 27 Nov 2019 | 10:30 - 11:30 | Coffee Shop (NPT.R111) | Coffee & Coding Code Surgery Drop-In Session | - | An opportunity to discuss any coding problems you are having or perhaps find better ways of solving issues. <br>Open to coders of any level or those who have not started yet and want some guidance on how to begin. |
-|Tues 12 Nov 2019 | 11:00 - 12:00 | NPT D.289 | Overview of Code Testing | David Pugh | An introduction and overview of different testing approaches, discussing why we would test and trying to decide the best testing approach to use. We will also look at a worked example of Test Driven Development. |
+|Tues 12 Nov 2019 | 11:00 - 12:00 | NPT D.289 | [Overview of Code Testing](https://github.com/datasciencecampus/coffee-and-coding/tree/master/20191112_code_testing_overview) | David Pugh | An introduction and overview of different testing approaches, discussing why we would test and trying to decide the best testing approach to use. We will also look at a worked example of Test Driven Development. |
 |Thur 12 Sept 2019 | 11:00 - 12:00 | NPT D.289 | Department for Transport R Extravaganza | Tamsin Forbes & Hannah Bougdah | Presenting from their just out R-cookbook, aimed at DfT analysts |
 |Tue 23 Aug 2019 | 10:30 - 11:30 | NPT D.289 | The principles and practice of Git | Fero Hajnovic & Jacob Hamblin-Pyke |A more indepth look at using Git, plus a lightning talk from the DAP CATS|
 |Mon 22 Jul 2019 | 14:00 - 15:00 | NPT R.103 | Reproducible Analytical Pipelines (RAP) | Catrin Cheung and Josh Halls | Introduction to RAP, and how they can be used to improve the quality and efficiency of our statistics
