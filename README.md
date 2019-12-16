@@ -32,7 +32,7 @@ Folders should adhere to the following conventions:
 ## Aim
 The aim of the Coffee & Coding meetups is to nurture, enable and encourage a vibrant, supportive and inclusive coding community at ONS. Coffee & Coding provides a regular opportunity for people within ONS who are interested in coding to share skills and knowledge, provide advice and guidance to each other and generally network and get to know each other. <br>The format is generally 40 minutes for a presentation and questions to the presenter/s followed by an informal Code Surgery. The presentations usually take the form of a demonstration of a tool or technique and/or a show and tell of work done within the department using these methods. From time to time we will invite external speakers. The Code Surgery provides the opportunity for people to pose any coding related queries/ruminations/ideas to the gathered coding community.
 
-Since there is often not enough time at the end of sessions for the Code Surgery we are considering running hour-long drop-in Code Surgeries, in the coffee shop, in addition to the presentation based monthly Coffee & Coding sessions. <br>The first drop-in Code Surgery will take place 10:30-11:30 on Wednesday 27 November. 
+Since there is often not enough time at the end of sessions for the Code Surgery we are considering running hour-long drop-in Code Surgeries, in the coffee shop, in addition to the presentation based monthly Coffee & Coding sessions. <br>We had our first drop-in Code Surgery on Wednesday 27 November and are planning to have the second session in January. 
 
 ## Coffee & Coding Schedule
 
