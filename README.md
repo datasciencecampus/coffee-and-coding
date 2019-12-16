@@ -8,21 +8,18 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-### Code Surgery
-
-On Wednesday 27 November (10:30-11:30) we are planning to run our first hour-long drop-in Code Surgery session in the coffee shop. 
-
-This will be an opportunity to discuss any coding problems you are having, or perhaps find better ways of solving issues. Open to coders of any level or those who have not started yet and want some guidance on how to begin. 
-
-Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-coding-surgery-drop-in-session-tickets-80907405227)
-
-### Our Next Presentation Event
-
 Our next event will be 10:30-11:30 on Tuesday 17 December 2019 in NPT D.289.
 
 The Reproducible Analytical Pipeline (RAP) is a methodology for automating the bulk of the steps involved in creating a statistical report. Wil Roberts' beginner-to-intermediate interactive session will demonstrate some good practices in building RAP in DAP.
 
 Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-rap-in-dap-tickets-80904907757)
+
+### Code Surgery
+
+On Wednesday 27 November we ran our first hour-long drop-in Code Surgery session in the coffee shop. 
+We are planning to run another Code Surgery session in January, further details will be made available in January.
+
+This will be an opportunity to discuss any coding problems you are having, or perhaps find better ways of solving issues. Open to coders of any level or those who have not started yet and want some guidance on how to begin. 
 
 ## Contributing
 Note that resources are _publicly accessible_. When adding new content work on a branch and submit a pull request.
