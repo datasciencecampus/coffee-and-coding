@@ -8,11 +8,11 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-Our next event will be 10:30-11:30 on Tuesday 17 December 2019 in NPT D.289.
+Our next event will be 14:00-15:00 on Thursday 16 January 2019 in NPT D.289.
 
-The Reproducible Analytical Pipeline (RAP) is a methodology for automating the bulk of the steps involved in creating a statistical report. Wil Roberts' beginner-to-intermediate interactive session will demonstrate some good practices in building RAP in DAP.
+A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis. The Jupyter notebook will be available online, so ideally bring your laptop so you can work through it with us.
 
-Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-rap-in-dap-tickets-80904907757)
+Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895)
 
 ### Code Surgery
 
@@ -36,10 +36,11 @@ Since there is often not enough time at the end of sessions for the Code Surgery
 
 ## Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-rap-in-dap-tickets-80904907757).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895).
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
+|Thur 16 Jan 2019|14:00-15:00|NPT D.289|[Natural Language Processing with Time Series Analysis](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895)|Ian Grimstead|A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis.|
 | Tues 17 Dec 2019 | 10:30 - 11:30 | NPT D.289 | [RAP in DAP](https://www.eventbrite.co.uk/e/coffee-and-coding-rap-in-dap-tickets-80904907757) | Wil Roberts | The Reproducible Analytical Pipeline (RAP) is a methodology for automating the bulk of the steps involved in creating a statistical report.  This beginner-to-intermediate interactive session will demonstrate some good practices in building RAP in DAP. |
 | Wed 27 Nov 2019 | 10:30 - 11:30 | Coffee Shop (NPT.R111) | [Coffee & Coding Code Surgery Drop-In Session](https://www.eventbrite.co.uk/e/coffee-and-coding-coding-surgery-drop-in-session-tickets-80907405227) | - | An opportunity to discuss any coding problems you are having or perhaps find better ways of solving issues. <br>Open to coders of any level or those who have not started yet and want some guidance on how to begin. |
 |Tues 12 Nov 2019 | 11:00 - 12:00 | NPT D.289 | [Overview of Code Testing](https://github.com/datasciencecampus/coffee-and-coding/tree/master/20191112_code_testing_overview) | David Pugh & Ian Grimstead | An introduction and overview of different testing approaches, discussing why we would test and trying to decide the best testing approach to use. We will also look at a worked example of Test Driven Development. |
