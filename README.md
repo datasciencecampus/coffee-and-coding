@@ -10,7 +10,9 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 Our next event will be 14:00-15:00 on Thursday 16 January 2019 in NPT D.289.
 
-A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis. The Jupyter notebook will be available online, so ideally bring your laptop so you can work through it with us.
+A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis. 
+
+The Jupyter notebook will be available online, so ideally bring your laptop so you can work through it with us.
 
 Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895)
 
