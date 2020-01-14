@@ -3,7 +3,7 @@ To open the Jupyter notebook:
 Navigate to https://colab.research.google.com 
 (A Google search for 'google colab' will find it)
 
-Sign in to your Google account (or create one)
+Sign in to your Google account (or create one).
 
 Click 'GitHub' in the tab options on the popup.
 
