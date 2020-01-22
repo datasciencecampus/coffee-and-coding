@@ -40,7 +40,9 @@ Since there is often not enough time at the end of sessions for the Code Surgery
 
 ## Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. If you would like to attend the London ONS Coffee and Coding please check their Github repo for more information https://github.com/datasciencecampus/coffee-and-coding-LDN. 
+Please note *events are restricted to ONS employees*, unless individual approval has been given. This repo contains details of Coffee and Coding events in Newport. 
+
+If you would like to attend the London ONS Coffee and Coding please check their Github repo for more information https://github.com/datasciencecampus/coffee-and-coding-LDN. 
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
