@@ -2,7 +2,9 @@
 
 # ONS Newport Coffee & Coding
 
-A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding). Interested in what other Government Departments have coffee and coding? Check out the [Government RAP website](https://ukgovdatascience.github.io/rap-website/resource-coffee-and-coding.html).
+A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions in Newport. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding). Interested in what other Government Departments have coffee and coding? Check out the [Government RAP website](https://ukgovdatascience.github.io/rap-website/resource-coffee-and-coding.html).
+
+If you are interested in attending the London ONS Coffee and Coding please check their Github repo for more information: https://github.com/datasciencecampus/coffee-and-coding-LDN.
 
 Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for future events.
 
@@ -38,7 +40,7 @@ Since there is often not enough time at the end of sessions for the Code Surgery
 
 ## Coffee & Coding Schedule
 
-Please note *events are restricted to ONS employees*, unless individual approval has been given. Please note that currently events are going to be held in ONS Newport without skyping to Titchfield and London, if you have any comments please get in touch. Register for the next event via eventbrite [here](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895).
+Please note *events are restricted to ONS employees*, unless individual approval has been given. If you would like to attend the London ONS Coffee and Coding please check their Github repo for more information https://github.com/datasciencecampus/coffee-and-coding-LDN. 
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
