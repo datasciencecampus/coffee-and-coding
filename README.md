@@ -10,13 +10,11 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-Our next event will be 14:00-15:00 on Thursday 16 January 2019 in NPT D.289.
+Our next event will be 14:00-15:00 on Friday 21 February 2020 in NPT R.103.
 
-A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis. 
+Shiny is a package that makes it incredibly easy to build interactive web applications with R. This beginner-to-intermediate session will cover what Shiny is/can do, how you can use it in the ONS and demonstrate an highly customized dashboard that has been developed in Best Practice and Impact.
 
-The Jupyter notebook will be available online, so ideally bring your laptop so you can work through it with us.
-
-Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895)
+Sign up through the [Eventbrite page](https://www.eventbrite.co.uk/e/coffee-and-coding-r-shiny-dashboards-tickets-94200786087)
 
 ### Code Surgery
 
@@ -46,6 +44,7 @@ If you would like to attend the London ONS Coffee and Coding please check their 
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
+|Fri 21 February 2020|14:00-15:00|NPT R.103|[R Shiny Dashboards](https://www.eventbrite.co.uk/e/coffee-and-coding-r-shiny-dashboards-tickets-94200786087)| Dan Shiloh & Jack Sim | Shiny is a package that makes it incredibly easy to build interactive web applications with R. This beginner-to-intermediate session will cover what Shiny is/can do, how you can use it in the ONS and demonstrate an highly customized dashboard that has been developed in Best Practice and Impact.|
 |Thur 16 Jan 2019|14:00-15:00|NPT D.289|[Natural Language Processing with Time Series Analysis](https://www.eventbrite.co.uk/e/coffee-and-coding-natural-language-processing-with-time-series-analysis-tickets-86314132895)|Ian Grimstead|A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis.|
 | Tues 17 Dec 2019 | 10:30 - 11:30 | NPT D.289 | [RAP in DAP](https://github.com/datasciencecampus/coffee-and-coding/tree/master/20191217_RAP_in_DAP) | Wil Roberts | The Reproducible Analytical Pipeline (RAP) is a methodology for automating the bulk of the steps involved in creating a statistical report.  This beginner-to-intermediate interactive session will demonstrate some good practices in building RAP in DAP. |
 | Wed 27 Nov 2019 | 10:30 - 11:30 | Coffee Shop (NPT.R111) | [Coffee & Coding Code Surgery Drop-In Session](https://www.eventbrite.co.uk/e/coffee-and-coding-coding-surgery-drop-in-session-tickets-80907405227) | - | An opportunity to discuss any coding problems you are having or perhaps find better ways of solving issues. <br>Open to coders of any level or those who have not started yet and want some guidance on how to begin. |
