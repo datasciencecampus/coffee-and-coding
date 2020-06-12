@@ -10,9 +10,11 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-Our next event will be Coffee & Coding: Building a python package for reproducible statistical tables on Wed 27 May 2020, 13:00-14:00.
+Our next event will be Coffee & Coding: NLP with Jonathon on Fri 26 June 2020, 13:30-14:30.
 
-Good Practice Tables ([gptables](https://github.com/best-practice-and-impact/gptables)) is a Python package for reproducibly writing statistical tables, which makes it easy to follow good practice guidance. This beginner-to-intermediate session will discuss why reproducibility is important and will introduce how creating and using packages can assure reproducibility in your analyses.
+*“My colleague (23M) keeps generating fake forum posts, what do I do?”*
+
+Using data from Reddit's r/relationships forum, NLP and deep learning we will look at the processes and challenges involved in generating stylised text. This session will not assume experience with NLP or neural networks, some basic machine learning will be helpful.
 
 This event will take place via Google Hangouts, the link will be included in the confirmation email you receive when you register to attend. 
 
@@ -44,6 +46,7 @@ If you would like to attend the London ONS Coffee and Coding please check their 
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
+|Fri 26 June 2020|13:30-14:30|Google Hangouts|[NLP with Jonathon](https://www.eventbrite.co.uk/e/coffee-and-coding-nlp-with-jonathon-tickets-109309487620)|Jonathon Mellor|“My colleague (23M) keeps generating fake forum posts, what do I do?” - Using data from Reddit's r/relationships forum, NLP and deep learning we will look at the processes and challenges involved in generating stylised text. This session will not assume experience with NLP or neural networks, some basic machine learning will be helpful.|
 |Wed 27 May 2020|13:00-14:00|Google Hangouts|[Building a python package for reproducible statistical tables](https://www.eventbrite.co.uk/e/coffee-and-coding-building-a-python-package-for-reproducible-statistical-tables-tickets-104977273852)|David Foster|Good Practice Tables ([gptables](https://github.com/best-practice-and-impact/gptables)) is a Python package for reproducibly writing statistical tables, which makes it easy to follow good practice guidance. This beginner-to-intermediate session will discuss why reproducibility is important and will introduce how creating and using packages can assure reproducibility in your analyses|
 |Fri 21 February 2020|14:00-15:00|NPT R.103|[R Shiny Dashboards](https://github.com/datasciencecampus/coffee-and-coding/tree/master/20200221_R_Shiny_Dashboards)| Dan Shiloh, Anthony Edwards & Ken Hughes | Shiny is a package that makes it incredibly easy to build interactive web applications with R. This beginner-to-intermediate session will cover what Shiny is/can do, how you can use it in the ONS and demonstrate an highly customized dashboard that has been developed in Best Practice and Impact.|
 |Thur 16 Jan 2019|14:00-15:00|NPT D.289|[Natural Language Processing with Time Series Analysis](https://github.com/datasciencecampus/coffee-and-coding/tree/master/20200116_Natural_Language_Processing)|Ian Grimstead|A hands-on Python tutorial in a Jupyter notebook, covering the use of natural language processing to detect popular terminology within patents, and visualise the usage of such terminology over time. The techniques are applicable to any collection of texts, only requiring dates if you also wish to carry out time series analysis.|
