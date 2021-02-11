@@ -10,14 +10,14 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-Our next event will be the first ever Coffee and Coding/RAS Technical Seminar super event - Nature of RAP: Crime stats automation. This will take place on Tuesday 24 November 2020 at 14:00-15:00.
+Our next event will be Coffee and Coding: How to write good tests quickly and efficiently. This will take place on Friday 26 February 2021 at 13:00-14:00.
 
-*Nature of RAP: Crime stats table automation*
+#### How to write good tests quickly and efficiently
 
-In March the Centre for Crime and Justice kicked off the ‘Nature of Crime’ RAP project with the aim to automate the 206 annual tables published from the Crime Survey for England and Wales (CSEW). We developed two reproducible analytical pipelines, in R and Python, in collaboration with the Best Practice and Impact team. The pipelines pick up the CSEW data, run the necessary manipulations and produce the final, fully formatted workbooks ready for publication. What previously took 13 analysts 3-weeks to produce, can now be created within an hour. We published [the tables](https://www.ons.gov.uk/releases/natureofcrimetablesyearendingmarch2020) and [the code](https://github.com/ONS-centre-for-crime-and-justice) that sits behind them in September and we are keen to share our learning of RAP and working with new coding tools.
+Mitch has personally written over 100 tests as part of the consumer prices transformation project. In this talk he’ll share his top tips for writing tests and creating test data. He’ll also explain how to structure your tests so that test scripts become an important part of your project’s documentation.
 
 Microsoft Teams will be used for this session - you will receive the link when you register for the event. 
-Since this event is in conjunction with the RAS Technical Seminars, if you are on the RAS mailing list you may already have an Outlook calendar invite in your calendar for this event. 
+
 
 ### Code Surgery
 
@@ -47,6 +47,7 @@ If you would like to attend the London ONS Coffee and Coding please check their 
 
 |Date| Time | Room | Title | Presenter | Abstract|
 |:----------------:|:----:|:---:|:---------:|:--------------------:|:-------------------------------|
+|Fri 26 February 2021|13:00-14:00|Microsoft Teams|[How to write good tests quickly and efficiently](https://www.eventbrite.co.uk/e/coffee-and-coding-how-to-write-good-tests-quickly-and-efficiently-tickets-141189520657)|Mitchell Edmunds|Mitch has personally written over 100 tests as part of the consumer prices transformation project. In this talk he’ll share his top tips for writing tests and creating test data. He’ll also explain how to structure your tests so that test scripts become an important part of your project’s documentation.|
 |Tues 24 November 2020|14:00-15:00|Microsoft Teams|[Nature of RAP: Crime stats table automation](https://www.eventbrite.co.uk/e/coffee-and-codingras-technical-seminar-super-event-tickets-129747184321)|Shannan Child & Greg Rose|In March the Centre for Crime and Justice kicked off the ‘Nature of Crime’ RAP project with the aim to automate the 206 annual tables published from the Crime Survey for England and Wales (CSEW). We developed two reproducible analytical pipelines, in R and Python, in collaboration with the Best Practice and Impact team. The pipelines pick up the CSEW data, run the necessary manipulations and produce the final, fully formatted workbooks ready for publication. What previously took 13 analysts 3-weeks to produce, can now be created within an hour. We published [the tables](https://www.ons.gov.uk/releases/natureofcrimetablesyearendingmarch2020) and [the code](https://github.com/ONS-centre-for-crime-and-justice) that sits behind them in September and we are keen to share our learning of RAP and working with new coding tools.|
 |Fri 26 June 2020|13:30-14:30|Google Hangouts|[NLP with Jonathon](https://github.com/jonathonmellor/text_generation_cc)|Jonathon Mellor|“My colleague (23M) keeps generating fake forum posts, what do I do?” - Using data from Reddit's r/relationships forum, NLP and deep learning we will look at the processes and challenges involved in generating stylised text. This session will not assume experience with NLP or neural networks, some basic machine learning will be helpful.|
 |Wed 27 May 2020|13:00-14:00|Google Hangouts|[Building a python package for reproducible statistical tables](https://www.eventbrite.co.uk/e/coffee-and-coding-building-a-python-package-for-reproducible-statistical-tables-tickets-104977273852)|David Foster|Good Practice Tables ([gptables](https://github.com/best-practice-and-impact/gptables)) is a Python package for reproducibly writing statistical tables, which makes it easy to follow good practice guidance. This beginner-to-intermediate session will discuss why reproducibility is important and will introduce how creating and using packages can assure reproducibility in your analyses|
