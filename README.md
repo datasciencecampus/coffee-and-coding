@@ -10,7 +10,7 @@ Get in touch at: coffee.coding@ons.gov.uk, we welcome suggestions and ideas for 
 
 ## Our Next Event
 
-Our next event will be Coffee and Coding: How to write good tests quickly and efficiently. This will take place on Friday 26 February 2021 at 13:00-14:00.
+Our next event will be [Coffee and Coding: How to write good tests quickly and efficiently](https://www.eventbrite.co.uk/e/coffee-and-coding-how-to-write-good-tests-quickly-and-efficiently-tickets-141189520657). This will take place on Friday 26 February 2021 at 13:00-14:00.
 
 #### How to write good tests quickly and efficiently
 
