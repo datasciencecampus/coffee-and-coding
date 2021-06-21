@@ -2,7 +2,7 @@
 
 # ONS Newport Coffee & Coding
 
-A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions in Newport. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding). Interested in what other Government Departments have coffee and coding? Check out the [Government RAP website](https://ukgovdatascience.github.io/rap-website/resource-coffee-and-coding.html).
+A _public_ repository to hold resources and notes from ONS Coffee & Coding sessions in Newport. GitHub repository idea and layout lovingly sourced from [Department for Transport (DfT)'s repo](https://github.com/departmentfortransport/coffee-and-coding). Interested in what other Government Departments have coffee and coding? Check out the [Government RAP website](https://gss.civilservice.gov.uk/reproducible-analytical-pipelines/).
 
 If you are interested in attending the London ONS Coffee and Coding please check their Github repo for more information: https://github.com/datasciencecampus/coffee-and-coding-LDN.
 
