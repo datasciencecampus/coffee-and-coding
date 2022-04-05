@@ -11,7 +11,7 @@ For Loops and If Statements
 #%%
 # Exercise 1
 
-def interger_sum(begin_val, end_val, step_val):
+def integer_sum(begin_val, end_val, step_val):
     # Write your function here (DONT forget to remove pass)
     
     pass
