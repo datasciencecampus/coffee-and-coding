@@ -1,0 +1,291 @@
+EmpID,first name,last name,Age,Gender,Department,NumCoffee_Pw,NumLinesCode_Pw
+176973954-33,Dominic,Jones,38,Female,Data Science Campus,8,381
+176973904-18,Jennifer,Benson,44,Female,Methodology and Quality,10.6,452
+176972487-35,Diane,Burger,52,Male,Methodology and Quality,6.3,326
+176972983-74,Johnathan,Brookens,44,Male,Data Science Campus,9.2,460
+176971891-85,Christopher,Miller,37,Female,People and Business Services,4.3,293
+176971041-63,Betty,Sheikh,44,Male,Data Science Campus,5.8,380
+176971479-41,Marilyn,Mitchell,56,Other,People and Business Services,5.4,312
+176973696-90,Keith,Lewis,51,Other,Health Population and Methods Transformation,1.9,871
+176973267-56,Beatrice,Miller,41,Male,People and Business Services,5.8,303
+176973585-68,Timothy,Ferguson,20,Female,Data Science Campus,13.8,693
+176971357-81,Mike,Blakeslee,61,Other,Data Science Campus,11.9,471
+176973956-78,Elenor,Ghaemmaghami,23,Male,Data Science Campus,4.8,419
+176972937-72,Jon,Chaffin,57,Other,Data Growth and Operations,3.4,104
+176972947-28,Buford,Damelio,61,Male,Methodology and Quality,8.8,273
+176973736-17,David,Case,30,Female,Methodology and Quality,4.8,401
+176971445-71,David,Smith,44,Male,Data Growth and Operations,1.1,93
+176973352-42,Andria,Comstock,22,Female,Economic Statistics Change,7.8,514
+176973744-80,Bobbie,Banks,50,Other,Economic Statistics Change,12.5,476
+176972130-76,Marie,Palmer,36,Other,People and Business Services,1,285
+176972957-44,Larry,Merrill,44,Other,Economic Statistics Change,10.5,615
+176971233-84,Kevin,Gilmore,36,Female,Data Science Campus,6.8,615
+176971638-71,Don,Simmons,37,Male,Data Science Campus,5,510
+176973800-50,Christopher,Naz,33,Other,Data Growth and Operations,2.4,115
+176972213-70,Matthew,Knight,45,Female,Health Population and Methods Transformation,4.7,770
+176971893-40,Evelyn,Goularte,167,Female,Methodology and Quality,9.2,444
+176972567-20,John,Williams,19,Other,Health Population and Methods Transformation,3.9,886
+176973879-44,Armando,Vinson,54,Other,Health Population and Methods Transformation,4.8,872
+176972149-29,Michael,Richardson,52,Male,Data Science Campus,5.3,388
+176971657-38,Lori,Worthington,35,Female,People and Business Services,1.6,293
+176971324-47,Debbie,Gardner,41,Female,Data Growth and Operations,3.9,99
+176973524-45,John,Smith,52,Other,Methodology and Quality,5.5,490
+176972210-43,Sharon,Ladd,35,Male,Data Growth and Operations,4.7,109
+176972209-78,Elizabeth,Ross,45,Male,Data Growth and Operations,3.6,98
+176973895-48,Marie,Knotts,24,Female,Data Science Campus,5.7,472
+176971118-34,James,Fidler,43,Male,Data Science Campus,5.7,480
+176971112-84,Nancy,Barnett,42,Other,Data Growth and Operations,4.4,102
+176972773-27,Jason,Weathers,38,Male,Health Population and Methods Transformation,3.8,810
+176973915-81,Belinda,Uhlman,35,Other,Economic Statistics Change,9.6,696
+176971203-09,Alice,Mccoin,62,Male,Data Science Campus,4.4,342
+176971899-85,Shannon,Henschel,26,Other,Data Growth and Operations,2.8,133
+176972770-20,Bessie,Blocher,45,Female,Health Population and Methods Transformation,4.9,873
+176971257-03,Jeanetta,Spencer,37,Male,Data Science Campus,10.5,489
+176973495-63,Alan,Wilson,20,Female,Data Science Campus,6.7,589
+176971950-28,Martha,Bryant,34,Other,Data Science Campus,3.8,555
+176973111-92,Marie,Deleon,20,Male,Macroeconomic Statistics and Analysis,2.9,638
+176972476-70,Melanie,Ross,43,Male,Data Science Campus,4.5,543
+176971720-26,Helen,Rau,45,Other,Economic Statistics Change,11.7,527
+176972108-97,Melva,Terry,52,Male,Health Population and Methods Transformation,4.3,602
+176972634-33,Karen,Galyen,43,Female,Data Growth and Operations,1,109
+176971891-95,Marie,Fuentes,34,Female,Health Population and Methods Transformation,2.9,862
+176973366-43,Kerry,Dickens,27,Male,Methodology and Quality,4,215
+176971121-53,Kimberly,Barton,26,Male,People and Business Services,3.7,294
+176972196-20,Krista,Wingo,24,Female,Data Science Campus,6.5,256
+176971873-36,Melinda,Storey,35,Male,Data Growth and Operations,2,82
+176971577-83,Mike,Pickett,70,Female,People and Business Services,4,295
+176972327-97,Scotty,Taylor,29,Male,Macroeconomic Statistics and Analysis,7.9,482
+176971474-94,Rose,Schweitzer,59,Male,Health Population and Methods Transformation,3.4,959
+176971447-28,Richard,Robinson,52,Other,Data Growth and Operations,3.8,91
+176973762-31,Cynthia,Young,50,Other,Methodology and Quality,5,501
+176972518-82,Cynthia,Wolfert,32,Male,Health Population and Methods Transformation,4.5,793
+176971948-02,Frank,Perie,20,Male,Macroeconomic Statistics and Analysis,5.6,600
+176971315-63,Shantel,Beall,42,Other,Economic Statistics Change,11.5,649
+176972628-05,Virgie,Allen,39,Female,Health Population and Methods Transformation,5.8,817
+176972223-74,Gregory,Meath,67,Female,Health Population and Methods Transformation,5.5,783
+176973196-95,Joyce,Sasso,57,Female,Macroeconomic Statistics and Analysis,7.6,581
+176971225-27,Justin,Mcdermott,51,Other,Data Science Campus,8.2,417
+176973640-10,Ethel,Markley,34,Male,People and Business Services,2.5,279
+176973242-09,Mary,Daniels,61,Female,People and Business Services,3.2,305
+176973619-98,Juan,Doucette,32,Male,Data Science Campus,8.1,544
+176971013-89,Heather,Langowski,47,Other,Methodology and Quality,5.7,472
+176972211-89,Jason,Reynolds,34,Male,Data Science Campus,4.9,415
+176972472-91,Shawn,Rainforth,37,Male,Data Science Campus,10.9,540
+176971089-58,Kenneth,Meador,30,Male,People and Business Services,3.6,296
+176973923-70,Jesse,Schuchart,39,Male,Economic Statistics Change,11.7,341
+176971911-94,Christy,Sapp,57,Female,Methodology and Quality,5.5,550
+176971010-75,Dana,Parker,42,Female,Health Population and Methods Transformation,3.2,846
+176971810-61,Roxanne,Strange,37,Female,Health Population and Methods Transformation,4,794
+176972175-31,John,White,29,Other,Data Science Campus,8.7,363
+176972644-19,Janet,Montgomery,35,Female,Macroeconomic Statistics and Analysis,6.1,943
+176971132-71,Lucille,Cipriani,50,Female,People and Business Services,4.9,281
+176972612-75,Kellye,Phu,45,Female,Data Science Campus,12.1,591
+176972438-35,Yolanda,Pew,46,Female,Methodology and Quality,6,447
+176971088-27,Sharon,Sells,42,Female,People and Business Services,2.6,282
+176973107-22,Patricia,Salinas,47,Male,Data Science Campus,6.8,554
+176973040-77,Jerry,Paxman,45,Male,Data Growth and Operations,1.2,93
+176973949-12,Berry,Pike,18,Male,Data Science Campus,11.1,557
+176971534-72,Eugenia,Thomas,22,Female,Methodology and Quality,5.2,440
+176972700-03,Patricia,Jordan,19,Other,Health Population and Methods Transformation,1.6,763
+176971486-71,Julius,Odom,29,Male,People and Business Services,3.7,293
+176972739-70,Danny,Hardy,38,Male,Data Science Campus,7.3,536
+176971067-79,Martha,Castaneda,47,Female,Economic Statistics Change,8.5,526
+176973403-19,Bobby,Campos,69,Female,Data Science Campus,8.3,437
+176971795-53,Antonio,Ballard,41,Other,People and Business Services,4,318
+176971191-25,Bret,Sprague,53,Female,Data Growth and Operations,2.7,96
+176973473-03,Pamela,Schick,52,Female,Data Science Campus,6.8,624
+176973757-50,Lisa,Rodriguez,47,Other,Data Growth and Operations,2.9,92
+176971834-74,Michael,Sease,43,Male,Data Science Campus,8.8,489
+176972362-44,Alfredo,Metzger,52,Female,People and Business Services,5.1,310
+176971732-53,Eduardo,Marcello,35,Male,Data Science Campus,5.5,427
+176973130-04,Angela,Cox,53,Male,Data Science Campus,8.6,560
+176973202-46,Elizabeth,Ross,46,Other,Health Population and Methods Transformation,2,751
+176972086-92,William,Bender,54,Male,Data Science Campus,5.8,403
+176973287-72,Bertha,Bell,55,Female,Methodology and Quality,1.6,483
+176973628-88,Abraham,Dang,36,Male,Methodology and Quality,4.7,507
+176972207-04,Angelica,Matthew,61,Male,People and Business Services,2.1,326
+176973822-35,Curtis,Butcher,29,Male,Health Population and Methods Transformation,4.4,781
+176973677-24,Maile,Nichols,36,Male,Methodology and Quality,5.5,383
+176972115-08,Lila,Clay,43,Female,Macroeconomic Statistics and Analysis,2,478
+176973460-75,William,Gonzalez,45,Female,People and Business Services,2.5,333
+176972715-46,Christopher,Schultz,53,Female,Methodology and Quality,1.8,303
+176973932-54,Adam,Birdsell,34,Male,Health Population and Methods Transformation,3.2,870
+176971682-34,Joseph,Argo,42,Male,Methodology and Quality,2.4,391
+176971143-87,Rex,Robie,42,Male,Data Science Campus,6.8,561
+176973688-32,Martha,Ward,29,Male,Data Growth and Operations,4,94
+176973527-91,Joel,Harrison,50,Other,Data Growth and Operations,3.6,77
+176972751-50,Doris,Greely,24,Male,Data Science Campus,7.5,533
+176972983-69,Allison,Shirey,34,Female,Methodology and Quality,5.2,598
+176971407-95,Heather,Dagostino,20,Female,Data Growth and Operations,2.4,101
+176973931-17,Winston,Cahoon,21,Other,People and Business Services,1.6,285
+176971103-53,Earnest,Bennett,50,Female,Methodology and Quality,5.7,494
+176971722-18,Cheryl,Hart,58,Male,Data Science Campus,9.9,710
+176972394-04,Gary,Reed,23,Other,Health Population and Methods Transformation,4.3,710
+176972905-73,Marlene,Slater,45,Male,Data Science Campus,6.4,483
+176971332-85,Marcus,Jones,44,Male,Data Science Campus,10.9,463
+176972736-95,Jamie,Lane,44,Female,People and Business Services,6.9,323
+176971961-12,Megan,Pontious,39,Other,Data Science Campus,3.2,543
+176972181-13,Steven,Kaminsky,42,Other,Methodology and Quality,4.8,303
+176971796-24,Carol,Long,49,Male,Macroeconomic Statistics and Analysis,6.9,598
+176971595-81,Anita,Jones,20,Male,Health Population and Methods Transformation,5.8,915
+176971436-83,Lester,Salazar,26,Male,Methodology and Quality,6.9,246
+176973076-77,Glen,Scott,42,Female,People and Business Services,3.7,278
+176972442-80,Max,Cuchares,47,Other,Data Science Campus,7.3,543
+176972386-12,Dwight,Thull,44,Female,Methodology and Quality,3.9,454
+176971298-60,Mary,Robert,45,Other,Data Science Campus,8.7,501
+176971884-39,Elvira,Perales,25,Other,Methodology and Quality,6,432
+176971937-01,Raymond,Watson,49,Male,People and Business Services,5.5,307
+176971556-73,May,Otte,29,Female,Economic Statistics Change,13.1,622
+176973630-68,Candice,Livingston,55,Female,Data Science Campus,10.3,491
+176971547-12,Robert,Martinez,43,Other,Data Science Campus,9.2,549
+176973501-93,Jose,Green,20,Male,Methodology and Quality,6,306
+176973411-53,Rebecca,Wren,53,Female,People and Business Services,3.9,286
+176972906-87,Jean,Lipner,39,Female,Health Population and Methods Transformation,2.7,730
+176973870-35,Windy,Scott,34,Female,Methodology and Quality,5.1,398
+176971231-59,Christina,Ledford,27,Other,Economic Statistics Change,9.6,610
+176972323-16,David,Turner,22,Male,Health Population and Methods Transformation,2.6,961
+176971131-96,Michelle,Lair,46,Female,Data Growth and Operations,2.3,98
+176973243-15,Eveline,Edwards,27,Female,Health Population and Methods Transformation,6.1,696
+176973990-54,James,Bender,39,Female,Data Science Campus,7.1,482
+176973280-73,William,Fitzgerald,18,Other,Economic Statistics Change,8.5,723
+176973302-77,Marilyn,Hamilton,40,Other,Methodology and Quality,5.6,288
+176971017-66,Tami,Tipka,24,Other,Macroeconomic Statistics and Analysis,9.5,415
+176973551-13,Diane,Borek,47,Male,Health Population and Methods Transformation,3.2,725
+176971770-25,Beatrice,Donaldson,59,Other,Data Growth and Operations,3.2,73
+176972162-38,Deborah,Hall,49,Male,Data Science Campus,6.2,384
+176973926-78,Preston,Sheffield,50,Other,Data Growth and Operations,2.3,98
+176973178-64,Barry,Hursey,49,Female,Methodology and Quality,6.3,417
+176972005-84,Scottie,Scaffidi,50,Female,Health Population and Methods Transformation,4,709
+176972194-85,Jeanette,Wilson,56,Female,Health Population and Methods Transformation,4.4,905
+176972421-84,Carolyn,Bellamy,36,Female,Health Population and Methods Transformation,3.9,887
+176971979-46,Rosalie,Willis,28,Male,Macroeconomic Statistics and Analysis,6.9,626
+176973646-04,Christopher,Decker,36,Male,Data Science Campus,10.4,438
+176972121-59,Benita,Davis,50,Male,Data Science Campus,9.9,441
+176971572-09,Arthur,Graves,54,Male,Methodology and Quality,5.1,465
+176973077-01,Sylvia,Risbeck,39,Other,Methodology and Quality,2.4,473
+176972397-79,Jeremy,Bramlett,23,Female,Economic Statistics Change,4.7,621
+176972761-76,Margret,Pokorny,44,Female,People and Business Services,3,290
+176971994-71,Peter,Edwards,45,Female,Macroeconomic Statistics and Analysis,5,617
+176971015-67,Kyle,Allen,36,Male,People and Business Services,2.9,305
+176973395-07,John,Carr,35,Male,Methodology and Quality,4.9,346
+176971412-97,Sandra,Marrero,35,Male,People and Business Services,4.3,327
+176973753-49,Michael,Carol,51,Female,People and Business Services,4.9,305
+176972494-89,Ashley,Clark,51,Male,People and Business Services,3.3,288
+176971577-86,Gary,Stevens,43,Male,Methodology and Quality,8.2,648
+176971088-40,Alice,Krout,32,Male,Data Science Campus,7.2,498
+176971608-91,Lucile,Miller,41,Female,Health Population and Methods Transformation,2.6,785
+176971488-20,Kristen,Walker,42,Male,Methodology and Quality,3.1,427
+176973172-55,Timothy,Liriano,39,Female,People and Business Services,2.6,303
+176973141-28,Wallace,Myers,37,Female,People and Business Services,3.9,295
+176971996-44,Richard,Koch,61,Other,People and Business Services,4.8,330
+176973203-68,Lewis,Keenan,50,Male,Data Science Campus,6.3,481
+176971090-07,William,Delarosa,25,Female,Methodology and Quality,4.6,313
+176971797-75,Ricky,Luna,34,Female,Economic Statistics Change,11.6,646
+176973620-70,Bert,Dellosso,40,Male,Methodology and Quality,3.9,367
+176973063-48,Walter,Desrosiers,48,Other,People and Business Services,5.4,309
+176972364-45,Barbara,Cheung,42,Male,People and Business Services,5.7,300
+176973827-95,Erin,Rowlett,40,Male,Macroeconomic Statistics and Analysis,2.3,546
+176971065-53,Angela,Wilhelm,26,Female,Data Science Campus,7.3,477
+176971863-26,Rachael,Houston,41,Female,People and Business Services,4,284
+176972641-67,Thelma,Poole,54,Male,Data Science Campus,7.3,490
+176972030-03,Alfredo,Johnson,40,Female,Methodology and Quality,3.1,505
+176973443-06,Jordan,Wolfe,26,Male,Data Science Campus,10.4,526
+176973448-79,Nancy,Lee,53,Female,Health Population and Methods Transformation,3.6,696
+176972764-26,Garry,Bennett,39,Female,Methodology and Quality,4.6,589
+176972729-34,Lisa,Knight,43,Other,Health Population and Methods Transformation,4.7,890
+176971527-07,Matthew,Wagner,56,Other,Data Science Campus,9,519
+176973109-50,Helen,Wedgewood,56,Other,Data Science Campus,9,558
+176972504-36,Michael,Nelson,43,Other,Methodology and Quality,2.9,198
+176973686-19,Gary,Anderson,42,Other,Health Population and Methods Transformation,6.4,801
+176971021-05,Kathrine,Collins,29,Female,Methodology and Quality,6.2,473
+176971826-81,Danielle,Cave,31,Female,People and Business Services,4.5,296
+176972388-52,Patrick,Moore,39,Male,Macroeconomic Statistics and Analysis,4.9,422
+176971678-32,Edward,Jasper,48,Other,Methodology and Quality,6.8,361
+176971271-06,Jennifer,Jackson,45,Female,Data Growth and Operations,0.8,100
+176973753-67,Trula,Magee,40,Female,Data Science Campus,8.3,536
+176973965-09,Andre,Owens,29,Female,Data Science Campus,3.7,472
+176973733-65,Jose,Henley,33,Male,People and Business Services,3,281
+176971044-69,Brian,Soto,71,Male,Macroeconomic Statistics and Analysis,6.8,662
+176973366-65,Alicia,Mbonu,55,Male,Data Science Campus,10.1,522
+176971472-82,Alberta,Hernandez,51,Other,People and Business Services,6.2,271
+176972860-51,Natalie,Cuevas,48,Female,Methodology and Quality,2.8,439
+176972812-98,Cleo,Gonzales,44,Female,People and Business Services,2.1,294
+176972780-33,Jennifer,Mcclung,64,Female,Data Growth and Operations,3,109
+176971624-82,Jeremy,Patterson,46,Male,People and Business Services,5.2,300
+176972810-41,Ronald,Corbin,35,Male,Data Science Campus,6.2,515
+176972970-25,Karen,Nooe,30,Male,Methodology and Quality,7.7,444
+176971688-90,Carol,Perez,45,Female,Macroeconomic Statistics and Analysis,7.5,609
+176972353-66,Larry,Smythe,51,Male,Health Population and Methods Transformation,5.1,796
+176972800-84,Dolores,Smith,41,Male,Methodology and Quality,8.6,342
+176973751-23,Erin,Lucas,31,Male,People and Business Services,3.9,309
+176973342-27,Lisa,Bird,28,Other,Health Population and Methods Transformation,3.2,828
+176971692-71,Thomas,Halliday,58,Other,Data Growth and Operations,2.4,99
+176973911-08,Leann,Albritton,42,Male,Data Science Campus,5.1,486
+176972671-32,Richard,Slavin,52,Male,People and Business Services,5.3,281
+176971800-15,Benjamin,Park,40,Male,Data Science Campus,9.5,533
+176971173-97,Jeanette,Foley,51,Male,Data Science Campus,10.4,528
+176971618-57,Clinton,Atkins,42,Female,Methodology and Quality,6,439
+176973851-39,Jeremy,Lopez,34,Male,People and Business Services,5.9,290
+176971826-23,Robert,Edge,29,Female,Methodology and Quality,2.1,487
+176973456-28,Kevin,Owen,49,Other,Methodology and Quality,10.7,382
+176971869-35,Jordan,Whitener,19,Other,Data Science Campus,7.1,424
+176973160-06,Marion,Lyons,37,Male,People and Business Services,4.5,303
+176972187-20,Donna,Mcdaniel,49,Female,Data Science Campus,8.2,520
+176971538-57,Brandon,Talty,54,Female,Methodology and Quality,5.8,333
+176972697-91,Alan,Cote,35,Male,Economic Statistics Change,9.9,569
+176972538-42,Martha,George,20,Female,Methodology and Quality,1.9,351
+176972492-63,Peter,Scherer,55,Female,Methodology and Quality,5.7,381
+176973177-85,Jorge,Ullrich,29,Male,Methodology and Quality,6.4,587
+176971963-72,Patricia,Vereen,45,Male,Methodology and Quality,1.8,420
+176971973-49,James,Look,49,Female,Health Population and Methods Transformation,2.9,858
+176971409-51,Edmond,Gerwig,35,Female,Data Growth and Operations,3.2,77
+176972961-18,Regina,Loffelbein,43,Male,Methodology and Quality,7.3,307
+176972673-64,Miriam,Hill,38,Other,Health Population and Methods Transformation,4.6,787
+176972954-37,Theresa,King,58,Female,Health Population and Methods Transformation,5.9,788
+176973053-97,Teresa,Henriques,46,Female,Economic Statistics Change,10.3,475
+176972419-52,Eric,Griffith,36,Female,People and Business Services,3.2,286
+176971133-27,Karey,Horwath,21,Female,Methodology and Quality,8.1,331
+176972788-25,Deborah,Delong,24,Male,Data Science Campus,11.5,536
+176972350-97,Charles,Punt,35,Male,People and Business Services,3.1,294
+176973654-71,Katie,Lamb,29,Female,People and Business Services,4.7,320
+176971541-67,William,Park,70,Other,Methodology and Quality,6.6,619
+176972585-05,Katrina,Rexrode,33,Male,Economic Statistics Change,9.9,712
+176972740-03,Charles,Hall,33,Male,Methodology and Quality,6,394
+176971772-43,Kelsey,Rodriguez,22,Female,Economic Statistics Change,11,411
+176972904-42,Heidi,Peele,48,Male,Economic Statistics Change,9.5,437
+176972636-61,Gregory,Myers,31,Female,Data Science Campus,5.6,599
+176973505-94,Gary,Wilcoxon,38,Other,Health Population and Methods Transformation,4,786
+176973911-68,Naomi,Stanley,57,Other,People and Business Services,4.7,293
+176972491-83,Deborah,Messersmith,51,Other,Data Science Campus,4.9,650
+176973194-09,George,Womack,37,Male,Macroeconomic Statistics and Analysis,7.6,551
+176971086-79,Kenneth,Sharp,18,Female,People and Business Services,3.9,295
+176972318-94,Yvette,Vondielingen,34,Female,Health Population and Methods Transformation,3.5,820
+176972688-63,Mary,Collier,27,Male,Economic Statistics Change,7.5,440
+176973608-84,Marcus,Miller,22,Other,Health Population and Methods Transformation,2.2,792
+176971332-12,Edith,Hinkson,53,Female,Methodology and Quality,5,585
+176973351-94,Jorge,Wallace,27,Female,Health Population and Methods Transformation,3.1,700
+176973492-94,Sherry,Rave,37,Female,Macroeconomic Statistics and Analysis,1.4,568
+176971249-49,Judy,Reyna,57,Female,Methodology and Quality,6.3,243
+176971148-60,Lonnie,Inabinet,26,Female,Data Growth and Operations,4.3,87
+176971606-62,Kari,Escobar,34,Male,Health Population and Methods Transformation,4,696
+176972655-54,Diane,James,27,Female,Health Population and Methods Transformation,5.2,656
+176971814-65,Catherine,Stevens,41,Female,Data Science Campus,7.5,407
+176972095-11,Naomi,Kocon,40,Female,Data Science Campus,9.3,637
+176973673-84,Leland,Hernandez,19,Male,Data Science Campus,5.2,475
+176971280-68,Robert,Wayland,45,Other,People and Business Services,3.3,326
+176971128-53,Audrey,Mccullough,41,Other,Data Growth and Operations,2,99
+176973634-73,Wilma,Gilkes,53,Female,Macroeconomic Statistics and Analysis,2.1,496
+176971009-66,Timothy,Garcia,47,Male,Data Growth and Operations,2.8,123
+176973444-02,Molly,Hall,56,Male,Macroeconomic Statistics and Analysis,6.1,428
+176971540-64,Violet,Gordon,36,Male,Economic Statistics Change,11.5,663
+176973322-68,Ronald,Morales,19,Male,People and Business Services,2.2,325
+176973815-81,Gladys,Lee,35,Male,Macroeconomic Statistics and Analysis,2.7,505
+176971043-64,Carmen,Barber,40,Female,People and Business Services,4.2,273
+176971459-44,Carl,Johnson,27,Male,Data Science Campus,9.4,572
+176971685-42,Amanda,Willis,36,Male,People and Business Services,2.4,274
+176971690-03,George,Patterson,67,Other,Macroeconomic Statistics and Analysis,4.3,707
+176972961-45,Ruth,Ambrose,5,Female,Data Science Campus,10.4,536
+176972681-07,David,Dawson,49,Male,Health Population and Methods Transformation,5,889
+176972755-30,Marilyn,Johnson,47,Other,Methodology and Quality,4.3,327
+176972934-08,Walter,Skidgel,57,Male,Data Science Campus,9.9,552
+176972148-55,John,Ramey,49,Other,Methodology and Quality,10.1,488
